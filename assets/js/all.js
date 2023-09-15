@@ -6682,5 +6682,5 @@ var tools = function() {
     }(),
     prodVarUrl = "http://";
 "https:" == location.protocol && (prodVarUrl = "https://");
-var thishost = "mediamindsoft.com";
+var thishost = "kashifj.github.io";
 site.showPreloader();
