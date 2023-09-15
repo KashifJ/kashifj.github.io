@@ -5686,7 +5686,7 @@ var tools = function() {
                                 var s = t.data("transition");
                                 n = null != s && s, t.addClass("js-link"), P(r, !0)
                             } else {
-                                e.preventDefault(), window.open(i, "_blank").focus()
+                                // e.preventDefault(), window.open(i, "_blank").focus()
                             }
                     else {
                         if (e.preventDefault(), 1 == r.length) return void x(0);
