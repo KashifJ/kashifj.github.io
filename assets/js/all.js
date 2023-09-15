@@ -1864,7 +1864,7 @@ var _gsScope;
         Ie = new RegExp("^(" + Z + ")(?!px)[a-z%]+$", "i"),
         Ne = function(t) {
             var i = t.ownerDocument.defaultView;
-            return i && i.opener || (i = e), i.getComputedStyle(document.getElementById(t))
+            return i && i.opener || (i = e), i.getComputedStyle(t)
         };
 
     function Le(e, t, i) {
@@ -1882,7 +1882,7 @@ var _gsScope;
         function t() {
             if (l) {
                 l.style.cssText = "box-sizing:border-box;position:relative;display:block;margin:auto;border:1px;padding:1px;top:1%;width:50%", l.innerHTML = "", me.appendChild(a);
-                var t = e.getComputedStyle(document.getElementById(l));
+                var t = e.getComputedStyle(l);
                 i = "1%" !== t.top, o = "2px" === t.marginLeft, r = "4px" === t.width, l.style.marginRight = "50%", s = "4px" === t.marginRight, me.removeChild(a), l = null
             }
         }
@@ -5686,7 +5686,7 @@ var tools = function() {
                                 var s = t.data("transition");
                                 n = null != s && s, t.addClass("js-link"), P(r, !0)
                             } else {
-                                // e.preventDefault(), window.open(i, "_blank").focus()
+                                //e.preventDefault(), window.open(i, "_blank").focus()
                             }
                     else {
                         if (e.preventDefault(), 1 == r.length) return void x(0);
@@ -6680,7 +6680,7 @@ var tools = function() {
             }
         }
     }(),
-    prodVarUrl = "http://";
+    prodVarUrl = "https://";
 "https:" == location.protocol && (prodVarUrl = "https://");
 var thishost = "kashifj.github.io";
 site.showPreloader();
