@@ -2589,6 +2589,7 @@ footer .bottom-right .contact-area {
 
 .modal-body {
     padding: 0;
+    overflow: hidden;
 }
 
 .modal-body img {
