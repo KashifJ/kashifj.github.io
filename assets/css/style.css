@@ -2603,11 +2603,15 @@ footer .bottom-right .contact-area {
 } */
 
 .close-modal {
-    font-size: 2vw;
-    padding: 1vw 2vw;
+    font-size: 1.5vw;
+    padding: 2vw;
     color: #fff;
     display: block;
     padding-bottom: 20vw;
+    font-weight: 700;
+}
+.close-modal img {
+    margin-right: 15px;
 }
 
 .close-modal:hover {
