@@ -82,7 +82,7 @@ h3 {
 
 .project-desc h3 {
     padding-top: 0;
-    font-size: 3.8vw;
+    font-size: 3.5vw;
     text-transform: uppercase;
     padding-bottom: 40px;
     margin-bottom: 0;
@@ -97,6 +97,18 @@ a, p {
 
 a {
     color: #000;
+}
+
+.btn-primary {
+    background: #dc4158 !important;
+    border: 0 !important;
+    color: #fff !important;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 30px;
+}
+.btn-primary:hover {
+    background: #a83143 !important;
 }
 
 h4.sub-h {
@@ -185,7 +197,7 @@ h4.sub-h {
 }
 
 .one {
-    background-color: #F32D17;
+    background-color: #04A1D8;
 }
 
 .two {
@@ -1275,10 +1287,10 @@ h4.sub-h {
 }
 
 .navbar {
-    padding: 0;
-    padding-left: 4vw;
+    padding: 0;    
     list-style: none;
     justify-content: end;
+    margin: 0;
 }
 .navbar li {
     margin-left: 3vw;
@@ -1294,7 +1306,9 @@ h4.sub-h {
     /* For Safari 3.0 to 6.0 */
     transition: all .3s !important;
     /* For modern browsers */
-    font-size: 0.9vw;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .navbar a:before, .navbar a > span:before, .navbar a:after, .navbar a > span:after {
@@ -1303,9 +1317,9 @@ h4.sub-h {
     transition: transform 0.5s ease;
 }
 
-.navbar .link {
+/* .navbar .link {
     padding-top: 10px;
-}
+} */
 
 .navbar .link:before {
     left: 0;
@@ -2588,7 +2602,7 @@ footer .bottom-right .contact-area {
 }
 
 .close-modal {
-    font-size: 3.8vw;
+    font-size: 3.5vw;
     padding: 1vw 2vw;
     color: #fff;
     display: block;
