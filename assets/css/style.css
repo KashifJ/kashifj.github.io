@@ -2594,15 +2594,15 @@ footer .bottom-right .contact-area {
 .modal-body img {
     padding: 0;
     width: 100%;
-    padding: 60px;
+    /* padding: 60px; */
 }
 
-.modal-body .container-fluid {
+/* .modal-body .container-fluid {
     padding: 1rem;
-}
+} */
 
 .close-modal {
-    font-size: 3.5vw;
+    font-size: 2vw;
     padding: 1vw 2vw;
     color: #fff;
     display: block;
@@ -2613,11 +2613,10 @@ footer .bottom-right .contact-area {
     cursor: pointer;
 }
 
-.project-content {
-    padding: 1rem;
-    padding-top: 3rem;
+.project-content {        
     display: flex;
-    padding-bottom: 5vw;
+    padding-bottom: 50px;
+    padding-top: 50px;
 }
 
 .project-info {
