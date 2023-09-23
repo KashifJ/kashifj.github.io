@@ -82,11 +82,12 @@ h3 {
 
 .project-desc h3 {
     padding-top: 0;
-    font-size: 3.5vw;
+    font-size: 3vw;
     text-transform: uppercase;
     padding-bottom: 40px;
     margin-bottom: 0;
     line-height: 1;
+    font-weight: bold;
 }
 
 a, p {
@@ -113,7 +114,7 @@ a {
 
 h4.sub-h {
     font-family: 'NeueMachina';
-    font-size: .8vw;
+    font-size: 20px;
     text-transform: uppercase;
     letter-spacing: 2px;
     margin-bottom: 25px;
@@ -209,7 +210,7 @@ h4.sub-h {
 }
 
 .four {
-    background-color: #F4C055;
+    background-color: #A8B4C7;
 }
 
 /**.five{background-color: #5835F5;}.six{background-color: #cdf1ed;}**/
@@ -1352,7 +1353,7 @@ h4.sub-h {
     text-decoration: none;
     line-height: 24px;
     color: #000;
-    font-size: 1.2vw;
+    font-size: 24px;    
 }
 
 #work a:before, #work a > span:before, #work a:after, #work a > span:after {
@@ -1559,8 +1560,8 @@ h4.sub-h {
 }
 
 .project-desc .copy {
-    padding-left: 4vw;
-    padding-right: 4vw;
+    /* padding-left: 4vw;
+    padding-right: 4vw; */
     padding-bottom: 2vw;
 }
 
@@ -1572,7 +1573,7 @@ h4.sub-h {
 
 .project-desc p {
     margin-bottom: 1vw;
-    font-size: 1.2vw;
+    font-size: 24px;
 }
 
 .about {
@@ -2840,7 +2841,7 @@ footer .bottom-right .contact-area {
     }
 }
 
-.strokes {
+.strokes, .animated-bg {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -2849,7 +2850,7 @@ footer .bottom-right .contact-area {
 	height: 100%
 }
 
-.strokes div {
+.strokes div, .animated-bg div {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -2886,6 +2887,85 @@ footer .bottom-right .contact-area {
 
 .strokes div:nth-child(5) {
 	left: 83.3333333333%
+}
+
+.animated-bg div {
+    background: #f8f8f8;
+    width: 16.6666666667%;
+    z-index: -2;
+    opacity: 0;    
+}
+
+.animated-bg div:first-child {
+    animation: 3s infinite alternate show1;
+}
+
+.animated-bg div:nth-child(2) {
+    left: 33.3333333333%;
+    animation: 6s infinite alternate show2;
+}
+
+.animated-bg div:nth-child(3) {
+    left: 66.6666666667%;
+    animation: 9s infinite alternate show1;
+}
+
+@keyframes show1 {
+    0% {
+      opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }    
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes show2 {
+    0% {
+      opacity: 0;
+    }
+  
+    25% {
+      opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    75% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes show2 {
+    0% {
+      opacity: 0;
+    }
+  
+    25% {
+      opacity: 0;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    75% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
 }
 
 @media only screen and (max-width:660px) {
