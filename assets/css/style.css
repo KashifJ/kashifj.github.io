@@ -323,6 +323,13 @@ h4.sub-h {
     color: #fff;
     border-top: 1px solid #dc4158;
 }
+
+#footer-wrap p {
+    margin: 0;
+    padding: 0;
+    font-size: 22px;
+}
+
 .footer-links li div p:last-child {
     font-size: 12px;
     padding-bottom: 4px;
@@ -335,11 +342,6 @@ h4.sub-h {
 
 #contact .container {
     max-width: 85%;
-}
-
-#footer-wrap p {
-    margin: 0;
-    padding: 0;
 }
 
 /* Revealers */
