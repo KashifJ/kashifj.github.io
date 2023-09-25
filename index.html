@@ -588,15 +588,16 @@
 
     var button = $(e.relatedTarget);
     var modal = $(this);
-
+    
+    modal.find('.modal-body').load("");
+    
     // or, load content from value of data-remote url
     modal.find('.modal-body').load(button.data("remote"));
     $("html").addClass( "modal-open" );
 });
 
     $('#project-modal').on("hide.bs.modal", function() {
-        $("html").removeClass("modal-open");
-        $(this).find('.modal-body').load("");
+        $("html").removeClass("modal-open");        
     }); 
 
 
