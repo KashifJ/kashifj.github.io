@@ -198,11 +198,11 @@ h4.sub-h {
 }
 
 .one {
-    background-color: #38caff;
+    background-color: #ff9a6f;    
 }
 
 .two {
-    background-color: #ff9a6f;
+    background-color: #38caff;
 }
 
 .three {
@@ -331,7 +331,7 @@ h4.sub-h {
 }
 
 .footer-links li div p:last-child {
-    font-size: 12px;
+    font-size: 12px !important;
     padding-bottom: 4px;
     opacity: .6;
 }
@@ -1119,72 +1119,72 @@ h4.sub-h {
 @-webkit-keyframes reveal {
     0% {
         opacity: 0;
-        -webkit-transform: skewY(10deg) translateY(100%);
-        -moz-transform: skewY(10deg) translateY(100%);
-        -o-transform: skewY(10deg) translateY(100%);
-        transform: skewY(10deg) translateY(100%);
+        -webkit-transform: translateY(100%);
+        -moz-transform: translateY(100%);
+        -o-transform: translateY(100%);
+        transform: translateY(100%);
     }
 
     100% {
         opacity: 1;
-        -webkit-transform: skewY(0deg) translateY(0);
-        -moz-transform: skewY(0deg) translateY(0);
-        -o-transform: skewY(0deg) translateY(0);
-        transform: skewY(0deg) translateY(0);
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -o-transform: translateY(0);
+        transform: translateY(0);
     }
 }
 
 @-moz-keyframes reveal {
     0% {
         opacity: 0;
-        -webkit-transform: skewY(10deg) translateY(100%);
-        -moz-transform: skewY(10deg) translateY(100%);
-        -o-transform: skewY(10deg) translateY(100%);
-        transform: skewY(10deg) translateY(100%);
+        -webkit-transform: translateY(100%);
+        -moz-transform: translateY(100%);
+        -o-transform: translateY(100%);
+        transform: translateY(100%);
     }
 
     100% {
         opacity: 1;
-        -webkit-transform: skewY(0deg) translateY(0);
-        -moz-transform: skewY(0deg) translateY(0);
-        -o-transform: skewY(0deg) translateY(0);
-        transform: skewY(0deg) translateY(0);
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -o-transform: translateY(0);
+        transform: translateY(0);
     }
 }
 
 @-o-keyframes reveal {
     0% {
         opacity: 0;
-        -webkit-transform: skewY(10deg) translateY(100%);
-        -moz-transform: skewY(10deg) translateY(100%);
-        -o-transform: skewY(10deg) translateY(100%);
-        transform: skewY(10deg) translateY(100%);
+        -webkit-transform: translateY(100%);
+        -moz-transform: translateY(100%);
+        -o-transform: translateY(100%);
+        transform: translateY(100%);
     }
 
     100% {
         opacity: 1;
-        -webkit-transform: skewY(0deg) translateY(0);
-        -moz-transform: skewY(0deg) translateY(0);
-        -o-transform: skewY(0deg) translateY(0);
-        transform: skewY(0deg) translateY(0);
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -o-transform: translateY(0);
+        transform: translateY(0);
     }
 }
 
 @keyframes reveal {
     0% {
         opacity: 0;
-        -webkit-transform: skewY(10deg) translateY(100%);
-        -moz-transform: skewY(10deg) translateY(100%);
-        -o-transform: skewY(10deg) translateY(100%);
-        transform: skewY(10deg) translateY(100%);
+        -webkit-transform: translateY(100%);
+        -moz-transform: translateY(100%);
+        -o-transform: translateY(100%);
+        transform: translateY(100%);
     }
 
     100% {
         opacity: 1;
-        -webkit-transform: skewY(0deg) translateY(0);
-        -moz-transform: skewY(0deg) translateY(0);
-        -o-transform: skewY(0deg) translateY(0);
-        transform: skewY(0deg) translateY(0);
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -o-transform: translateY(0);
+        transform: translateY(0);
     }
 }
 
@@ -1433,6 +1433,10 @@ h4.sub-h {
     color: #000;
     text-transform: uppercase;
     font-family: "MonumentExtended UltraBold";
+}
+
+.s-03 span {
+    color: #dc4158;
 }
 
 /* .s-01 {
@@ -2618,8 +2622,7 @@ footer .bottom-right .contact-area {
 }
 .close-modal img {
     margin-right: 15px;
-    width: 40px;
-    rotate: -180deg;
+    width: 40px;    
 }
 
 .close-modal:hover {
