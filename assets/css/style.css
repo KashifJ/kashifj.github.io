@@ -2724,6 +2724,10 @@ footer .bottom-right .contact-area {
 
 .project-modal.docsee {
     background: #364153;
+    color: #fff;
+}
+.project-modal.docsee h3 {
+    color: #fff !important;
 }
 
 .project-modal p {
