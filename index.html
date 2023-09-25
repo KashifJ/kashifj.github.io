@@ -589,8 +589,6 @@
     var button = $(e.relatedTarget);
     var modal = $(this);
     
-    modal.find('.modal-body').load("");
-    
     // or, load content from value of data-remote url
     modal.find('.modal-body').load(button.data("remote"));
     $("html").addClass( "modal-open" );
