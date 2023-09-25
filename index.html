@@ -596,6 +596,7 @@
 
     $('#project-modal').on("hide.bs.modal", function() {
         $("html").removeClass("modal-open");
+        $(this).find('.modal-body').load("");
     }); 
 
 
