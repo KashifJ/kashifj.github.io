@@ -2587,6 +2587,7 @@ footer .bottom-right .contact-area {
 .modal-content {
     border: 0;
     border-radius: 0;
+    min-height: 100vh;
 }
 
 .modal-header {
