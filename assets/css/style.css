@@ -2722,6 +2722,10 @@ footer .bottom-right .contact-area {
     display: inline-block;
 }
 
+.project-modal.docsee {
+    background: #364153;
+}
+
 .project-modal p {
     line-height: 1.2;
 }
