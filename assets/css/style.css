@@ -206,11 +206,12 @@ h4.sub-h {
 }
 
 .three {
-    background-color: #8392ff;
+    background-color: #a8b2ff;
 }
 
 .four {
-    background-color: #A8B4C7;
+    /* background-color: #A8B4C7; */
+    background-color: #E5E6EA;
 }
 
 /**.five{background-color: #5835F5;}.six{background-color: #cdf1ed;}**/
