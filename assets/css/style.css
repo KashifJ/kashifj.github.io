@@ -82,7 +82,7 @@ h3 {
 
 .project-desc h3 {
     padding-top: 0;
-    font-size: 3vw;
+    font-size: 3.5vw;
     text-transform: uppercase;
     padding-bottom: 40px;
     margin-bottom: 0;
@@ -1580,7 +1580,7 @@ h4.sub-h {
 
 .project-desc p {
     margin-bottom: 1vw;
-    font-size: 24px;
+    font-size: 22px;
 }
 
 .about {
@@ -2273,8 +2273,7 @@ footer .bottom-right .contact-area {
         font-size: 30px;
     }
 
-    .close-modal {
-        font-size: 30px !important;
+    .close-modal {        
         padding: 3vw !important;
         padding-bottom: 150px !important;
     }
@@ -2612,7 +2611,7 @@ footer .bottom-right .contact-area {
 } */
 
 .close-modal {
-    font-size: 1.25vw;
+    font-size: 18px;
     padding: 2vw;
     color: #fff;
     display: block;
