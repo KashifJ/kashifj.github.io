@@ -2206,9 +2206,9 @@ footer {
     mix-blend-mode: difference;
 }
 
-.project-desc .contact-area {
+/* .project-desc .contact-area {
     width: 100px;
-}
+} */
 
 .contact-area {    
     height: 80px;
