@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en" >
 <head>
@@ -31,13 +30,14 @@
   <meta name="theme-color" content="#ffffff">
 
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-HSL97CSM95"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-HSL97CSM95');
-</script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-HSL97CSM95');
+    </script>
 
 </head>
 <body>
@@ -280,45 +280,6 @@
         </div>
     </div>
 </section>
-
-<!-- <section class="panel four">
-    <div class="h-100 d-flex flex-column justify-content-lg-center">
-        <div class="row justify-content-lg-center align-items-lg-center m-0">            
-            <div class="col-lg-5 d-flex h-100">
-
-                <div class="row w-100 project-desc">
-                    <div class="col-lg-12 align-self-lg-start mobile-display">
-
-                    </div>
-
-                    <div class="col-lg-12 align-self-lg-center">
-                        <h4 class="sub-h"><span class="did">04. Docsee</span></h4>
-                        <h3>Create, send & track quotes, proposals, contracts & invoices online</h3>
-                    </div>
-                    <div class="col-lg-12 align-self-lg-end copy">
-                        <p>DocSee is a complete cloud based software solution for Quotes, Proposals, Contracts & Invoices, that are simple to create, functional to use & they look great too.</p>
-                        <div class="contact-area" style="transform: matrix(1, 0, 0, 1, 0, 0);">
-                            <div class="text-hover" style="transform: matrix(1, 0, 0, 1, 0, 0);">
-                                &mdash;&nbsp;&nbsp;<a class="link ctn-atractive modallink" href="project-modal" data-remote="projects/docsee.html" data-toggle="modal" data-target="#project-modal">View</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            <div class="col-lg-7 p-0">
-                <div class="box">
-                    <div class="img-wrapper">
-                        <a href="project-modal" data-remote="projects/docsee.html" data-toggle="modal" data-target="#project-modal">
-                        <div class="portfolio-img img-four"></div>
-                        </a>
-                        <div class="overlay"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section> -->
 
 <section class="panel four">
     <div class="h-100 d-flex flex-column justify-content-lg-center">
@@ -639,88 +600,8 @@
 
 <script src="assets/js/jquery.simplemarquee.js"></script>
 
-<!-- New code -->
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
-
-<!-- New code -->
-<script>
-    $('#project-modal').on('show.bs.modal', function (e) {
-
-    var button = $(e.relatedTarget);
-    var modal = $(this);
-    
-    // or, load content from value of data-remote url
-    modal.find('.modal-body').load(button.data("remote"));
-    $("html").addClass( "modal-open" );
-});
-
-    $('#project-modal').on("hide.bs.modal", function() {
-        $("html").removeClass("modal-open");        
-    }); 
-
-
-</script>
-
-
-        <script>
-
-
-            var pages = [].slice.call(document.querySelectorAll('.pages > .page')),
-      currentPage = 0,
-      
-      revealerOpts = {
-        nmbLayers : 1,
-        bgcolor : ['#dc4158', '#fff', '#000'],
-        effect : 'anim--effect-3',
-        onStart : function(direction) {
-          var nextPage = pages[currentPage === 0 ? 1 : 0];
-                    classie.add(nextPage, 'page--animate-' + direction);
-                    setTimeout(function() {
-                        document.getElementById("body").classList.remove("hide");
-                        document.getElementById("a-00").classList.add("animate-first");
-                        document.getElementById("a-01").classList.add("animate-first");
-                        document.getElementById("a-02").classList.add("animate-first");
-                        document.getElementById("a-03").classList.add("animate-first");
-                        document.getElementById("a-04").classList.add("animate-first");
-                        document.getElementById("a-04").classList.add("animate-now");
-                    }, 500);
-        },
-        onEnd : function(direction) {
-          var nextPage = pages[currentPage === 0 ? 1 : 0];
-                    nextPage.className = 'page';
-        }
-      };
-            revealer = new Revealer(revealerOpts);
-            
-      function reveal(direction) {
-        var callbackTime = 750,
-          callbackFn = function() {
-            classie.remove(pages[currentPage], 'page--current');
-            currentPage = currentPage === 0 ? 1 : 0;
-            classie.add(pages[currentPage], 'page--current'); 
-          };
-
-        revealer.reveal(direction, callbackTime, callbackFn);
-      }
-            
-            reveal('top');
-
-
-
-            $(document).ready(function () {            
-                $('.skills-wrapper').simplemarquee({
-                    speed: 100,
-                    cycles: 100000,
-                    space: 0,
-                    delayBetweenCycles: 100,
-                    handleHover: false,
-                    handleResize: false
-                });
-            });
-
-        </script>
-
+<script src="assets/js/custom.js"></script>
 
 </body>
 </html>
