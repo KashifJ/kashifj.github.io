@@ -2274,7 +2274,7 @@ footer .bottom-right .contact-area {
     }
 
     .close-modal {        
-        padding: 3vw !important;
+        padding: 5vw !important;
         padding-bottom: 150px !important;
     }
 
@@ -3134,5 +3134,9 @@ footer .bottom-right .contact-area {
     }
     .about .time-date {
         font-size: 20px;
+    }
+    .project-content {
+        padding-top: 30px;
+        padding-bottom: 30px;
     }
 }
