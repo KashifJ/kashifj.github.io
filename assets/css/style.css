@@ -108,6 +108,9 @@ a {
     padding-right: 30px;
     border-radius: 30px;
     height: 40px;
+    padding-top: 0;
+    padding-bottom: 0;
+    line-height: 40px !important;
 }
 .btn-primary:hover {
     background: #a83143 !important;
