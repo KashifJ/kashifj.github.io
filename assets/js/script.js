@@ -1,4 +1,4 @@
-if (document.documentElement.clientWidth > 768) {
+if (document.documentElement.clientWidth > 991) {
     var controller = new ScrollMagic.Controller();
     var sections = document.querySelectorAll("section");
     var tl = new TimelineMax();
@@ -12,7 +12,7 @@ if (document.documentElement.clientWidth > 768) {
     new ScrollMagic.Scene({
         triggerElement: "#pinMaster",
         triggerHook: "onLeave",
-        duration: "300%"
+        duration: "420%"
     }).setPin("#pinMaster").setTween(tl).addTo(controller);
     $("section").each(function (i) {
         var picOverlay = $(this).find(".overlay");
