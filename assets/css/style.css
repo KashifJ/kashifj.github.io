@@ -215,6 +215,10 @@ h4.sub-h {
     background-color: #E5E6EA;
 }
 
+.five {
+    background-color: #D5DAEB;
+}
+
 /**.five{background-color: #5835F5;}.six{background-color: #cdf1ed;}**/
 .img-wrapper {
     position: relative;
@@ -248,7 +252,7 @@ h4.sub-h {
 }
 
 .img-five {
-    background-image: url(../images/p-1.jpg);
+    background-image: url(../images/p-5.jpg);
 }
 
 .img-six {
