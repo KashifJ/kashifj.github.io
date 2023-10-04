@@ -316,7 +316,7 @@ h4.sub-h {
     justify-content: space-between;
     text-decoration: none;
     padding: 25px 0;
-    border-top: 1px solid rgba(0, 0, 0, 0.5);
+    border-top: 1px solid rgba(0, 0, 0, 0.3);
     transition: .6s cubic-bezier(0,.89,.41,1);
     position: relative;
     overflow: hidden;
