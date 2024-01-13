@@ -3148,41 +3148,41 @@ footer .bottom-right .contact-area {
     }
 }
 
-.astra-project {
+.astra-project, .xloop-project {
     background: #000;
     min-height: 100vh;
     padding: 6vh 0 0;
     color: #6D6D6D;
     font-size: 18px;
 }
-.astra-project .container {
+.project-detail .container {
     max-width: 1250px;
 }
-.astra-project .all-projects {
+.project-detail .all-projects {
     font-size: 14px;    
     color: #808080;
     display: flex;
     cursor: pointer;
     align-items: center;
 }
-.astra-project .all-projects:hover {
+.project-detail .all-projects:hover {
     color: #fff;
 }
-.astra-project .all-projects img {
+.project-detail .all-projects img {
     width: 23px;
     opacity: 0.5;
     margin: 0 10px 0 0 !important;
 }
-.astra-project .all-projects:hover img {
+.project-detail .all-projects:hover img {
     opacity: 1;
 }
-.astra-project h2 {
+.project-detail h2 {
     color: #E2E2E2;
     font-size: 5vw;
     font-weight: bold;
     text-transform: none;
 }
-.astra-project h3 {
+.project-detail h3 {
     color: #E2E2E2;
     text-transform: uppercase;
     font-weight: bold;
@@ -3192,7 +3192,7 @@ footer .bottom-right .contact-area {
     padding-left: 65px;
     margin-bottom: 1rem;
 }
-.astra-project h3::before {
+.project-detail h3::before {
     content: "";
     position: absolute;
     top: 50%;
@@ -3201,24 +3201,24 @@ footer .bottom-right .contact-area {
     height: 1px;
     background: #E2E2E2;
 }
-.astra-project p {
+.project-detail p {
     color: #6D6D6D;
     padding-left: 65px;
     line-height: 1.7;
 }
-.astra-project ul {
+.project-detail ul {
     list-style-type: none;
     padding: 0;
     margin: 30px 0 0 65px;
     display: flex;
     flex-wrap: wrap;
 }
-.astra-project ul li {
+.project-detail ul li {
     margin: 10px 0 0;
     padding: 0;
     width: 33.33%;
 }
-.astra-project .has-bg-box-left::before, .astra-project .has-bg-box-right::before {
+.project-detail .has-bg-box-left::before, .project-detail .has-bg-box-right::before {
     content: "";
     width: 110vw;
     height: 334px;
@@ -3228,16 +3228,16 @@ footer .bottom-right .contact-area {
     left: -100%;
     z-index: 0;
 }
-.astra-project .has-bg-box-right::before {
+.project-detail .has-bg-box-right::before {
     top: auto;
     bottom: 0;
     left: auto;
     right: -100%;
 }
-.astra-project .has-bg-box-right {
+.project-detail .has-bg-box-right {
     padding: 0 0 150px;
 }
-.astra-project .has-bg-box-right ul, .astra-project .has-bg-box-right ul li {
+.project-detail .has-bg-box-right ul, .project-detail .has-bg-box-right ul li {
     padding: 0;
     margin: 0;
     list-style-type: none;
@@ -3263,4 +3263,47 @@ footer .bottom-right .contact-area {
     background: #252525;
     padding: 10vh 0;
     margin-top: 10vh;
+}
+.xloop-project {
+    background: #121133 url(../../projects/img/xloop/xloop-1.svg) no-repeat right top;
+    background-attachment: fixed;
+    color: #868697;
+}
+.xloop-project p {
+    color: #868697;
+}
+.xloop-project .all-projects {
+    color: #868697;
+}
+.xloop-project .has-bg-box-left::before, .xloop-project .has-bg-box-right::before {
+    background: #04A1D8;
+    top: 25%;
+}
+.xloop-project .has-bg-box-right {
+    padding-top: 140px;
+    margin-top: 140px;
+}
+.xloop-project .has-bg-box-right::before {
+    top: 0;
+    width: 150%;
+    height: 51%;
+}
+.xloop-project .brand-guidelines {
+    background: url(../../projects/img/xloop/xloop-5.png) no-repeat center top;
+    background-size: 100%;
+    padding: 7% 0 4%;
+}
+.xloop-project .brand-guidelines .container {
+    background: #F2FAFD;
+    padding: 0;
+}
+.xloop-project .brand-guidelines .top-section {
+    padding: 70px;
+    color: #54647A;
+}
+.xloop-project .brand-guidelines .top-section h3 {
+    color: #1B194A;
+}
+.xloop-project .brand-guidelines .top-section h3::before{
+    background: #1B194A;
 }
