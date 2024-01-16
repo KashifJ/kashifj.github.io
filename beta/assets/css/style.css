@@ -3341,3 +3341,10 @@ footer .bottom-right .contact-area {
 .wa-chat-box {
     margin-bottom: 64px !important;
 }
+.wa-chat-box-content-send-btn {
+    padding: 12px 0 !important;
+    text-decoration: none !important;
+}
+.wa-chat-box-content-send-btn-text {
+    text-decoration: none !important;
+}
