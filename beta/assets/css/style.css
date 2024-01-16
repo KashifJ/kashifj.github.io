@@ -3148,7 +3148,7 @@ footer .bottom-right .contact-area {
     }
 }
 
-.astra-project, .xloop-project {
+.astra-project, .xloop-project, .eshifa-project {
     background: #000;
     min-height: 100vh;
     padding: 6vh 0 0;
@@ -3156,7 +3156,7 @@ footer .bottom-right .contact-area {
     font-size: 18px;
 }
 .project-detail .container {
-    max-width: 1250px;
+    max-width: 1280px;
 }
 .project-detail .all-projects {
     font-size: 14px;    
@@ -3306,4 +3306,20 @@ footer .bottom-right .contact-area {
 }
 .xloop-project .brand-guidelines .top-section h3::before{
     background: #1B194A;
+}
+.eshifa-project {
+    background: #fff;
+    color: rgba(0, 0, 0, 0.5);
+}
+.project-detail.eshifa-project .all-projects:hover {
+    color: #000;
+}
+.eshifa-project h2 {
+    color: #DC4158;
+}
+.project-detail h3 {
+    color: #000;
+}
+.project-detail h3::before {
+    background: #000;
 }
