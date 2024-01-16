@@ -626,8 +626,40 @@
             </div>
     </main>
 
-
-    <script src='assets/js/kashifj.js'></script>    
+    <script src='assets/js/kashifj.js'></script>
+    
+    
+    <script>
+        var url = 'https://edna.io/wp-content/plugins/whatsapp-widget-generator/js/generator.js?48668';
+        var s = document.createElement('script');
+        s.type = 'text/javascript';
+        s.async = true;
+        s.src = url;
+        var options = {
+      "host":"https://edna.io",
+      "enabled":true,
+      "chatButtonSetting":{
+          "backgroundColor":"#4fce5d",
+          "ctaText":"",
+          "icon":"whatsapp",
+          "position":"right",
+      },
+      "brandSetting":{
+          "backgroundColor":"#085b53",
+          "brandImg":"https://kashifj.github.io/assets/images/pic.jpg",
+          "brandName":"Kashif Jamal Ahmed",
+          "brandSubTitle":"Online",
+          "ctaText":"Start Chat",
+          "phoneNumber":"971522738427",
+          "welcomeText":"Hi there!\nHow can I help you?"
+      }
+    };
+        s.onload = function() {
+            CreateWhatsappChatWidget(options);
+        };
+        var x = document.getElementsByTagName('script')[0];
+        x.parentNode.insertBefore(s, x);
+    </script>
 
 </body>
 </html>
