@@ -3323,3 +3323,21 @@ footer .bottom-right .contact-area {
 .project-detail.eshifa-project h3::before {
     background: #000;
 }
+.wa-chat-box-poweredby {
+    display: none !important;
+}
+.wa-chat-box-content-send-btn {
+    margin-bottom: 13px !important;
+}
+#wa-widget-send-button {
+    width: 50px !important;
+    height: 50px !important;
+    min-width: 50px !important;
+}
+#wa-widget-send-button svg {
+    width: 30px !important;
+    height: 30px !important;
+}
+.wa-chat-box {
+    margin-bottom: 64px !important;
+}
