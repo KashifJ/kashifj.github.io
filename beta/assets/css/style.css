@@ -3317,9 +3317,9 @@ footer .bottom-right .contact-area {
 .eshifa-project h2 {
     color: #DC4158;
 }
-.project-detail h3 {
+.project-detail.eshifa-project h3 {
     color: #000;
 }
-.project-detail h3::before {
+.project-detail.eshifa-project h3::before {
     background: #000;
 }
