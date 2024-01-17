@@ -196,12 +196,13 @@ function CreateWhatsappChatWidget(option = {
             font-size: 12px;
             line-height: 14px;
             margin-top: 3px;
+            opacity: 0.7;
         }
         
         .wa-chat-box-header{
-            height: 64px;
-            max-height: 64px;
-            min-height: 64px;
+            height: 80px;
+            max-height: 80px;
+            min-height: 80px;
             background-color: ${option.brandSetting.backgroundColor};
             color: white;
             border-radius: 10px 10px 0px 0px;
@@ -209,12 +210,13 @@ function CreateWhatsappChatWidget(option = {
             align-items: center;
         }
         .wa-chat-box-brand{
-            margin-left: 12px;
-            width: 36px;
-            height: 36px;
-            border-radius: 18px;
+            margin-left: 18px;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
             background: #fff;
             overflow: hidden;
+            box-shadow: 2px 2px 6px rgba(0,0,0,0.4);
         }
         .wa-chat-box{
             background-color:white;
