@@ -215,7 +215,8 @@ h4.sub-h {
 
 .four {
     /* background-color: #A8B4C7; */
-    background-color: #E5E6EA;
+    /* background-color: #E5E6EA; */
+    background-color: #F8909A;
 }
 
 .five {
@@ -251,7 +252,7 @@ h4.sub-h {
 }
 
 .img-four {
-    background-image: url(../images/p-4.jpg);
+    background-image: url(../images/p-6.jpg);
 }
 
 .img-five {
@@ -3322,6 +3323,9 @@ footer .bottom-right .contact-area {
 }
 .project-detail.eshifa-project h3::before {
     background: #000;
+}
+.project-detail.alissa-project .has-bg-box-left::before, .project-detail.alissa-project .has-bg-box-right::before {
+    background: #EC1B2E;
 }
 .wa-chat-box-poweredby {
     display: none !important;
