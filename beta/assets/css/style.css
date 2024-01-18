@@ -256,7 +256,7 @@ h4.sub-h {
 }
 
 .img-five {
-    background-image: url(../images/p-5.jpg);
+    background-image: url(../images/p-7.jpg);
 }
 
 .img-six {
@@ -3149,7 +3149,7 @@ footer .bottom-right .contact-area {
     }
 }
 
-.astra-project, .xloop-project, .eshifa-project {
+.astra-project, .xloop-project, .eshifa-project, .royal-store-project {
     background: #000;
     min-height: 100vh;
     padding: 6vh 0 0;
@@ -3327,6 +3327,17 @@ footer .bottom-right .contact-area {
 .project-detail.alissa-project .has-bg-box-left::before, .project-detail.alissa-project .has-bg-box-right::before {
     background: #EC1B2E;
 }
+.royal-store-project {
+    background: #0A1B2D;
+    color: #848D96;
+}
+.royal-store-project p {
+    color: #848D96;
+}
+.royal-store-project .all-projects {
+    color: #848D96;
+}
+
 .wa-chat-box-poweredby {
     display: none !important;
 }
