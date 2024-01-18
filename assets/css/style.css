@@ -215,7 +215,8 @@ h4.sub-h {
 
 .four {
     /* background-color: #A8B4C7; */
-    background-color: #E5E6EA;
+    /* background-color: #E5E6EA; */
+    background-color: #F8909A;
 }
 
 .five {
@@ -251,11 +252,11 @@ h4.sub-h {
 }
 
 .img-four {
-    background-image: url(../images/p-4.jpg);
+    background-image: url(../images/p-6.jpg);
 }
 
 .img-five {
-    background-image: url(../images/p-5.jpg);
+    background-image: url(../images/p-7.jpg);
 }
 
 .img-six {
@@ -2622,12 +2623,11 @@ footer .bottom-right .contact-area {
     font-size: 18px;
     padding: 2vw;
     color: #fff;
-    display: block;
-    padding-bottom: 20vw;
-    font-weight: 700;
+    display: block;    
+    font-weight: 400;
     align-items: center;
     display: flex;
-    letter-spacing: 5px;
+    background: #dc4158;
 }
 .close-modal img {
     margin-right: 15px;
@@ -3147,4 +3147,219 @@ footer .bottom-right .contact-area {
         padding-top: 30px;
         padding-bottom: 30px;
     }
+}
+
+.astra-project, .xloop-project, .eshifa-project, .royal-store-project {
+    background: #000;
+    min-height: 100vh;
+    padding: 6vh 0 0;
+    color: #6D6D6D;
+    font-size: 18px;
+}
+.project-detail .container {
+    max-width: 1280px;
+}
+.project-detail .all-projects {
+    font-size: 14px;    
+    color: #808080;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+}
+.project-detail .all-projects:hover {
+    color: #fff;
+}
+.project-detail .all-projects img {
+    width: 23px;
+    opacity: 0.5;
+    margin: 0 10px 0 0 !important;
+}
+.project-detail .all-projects:hover img {
+    opacity: 1;
+}
+.project-detail h2 {
+    color: #E2E2E2;
+    font-size: 5vw;
+    font-weight: bold;
+    text-transform: none;
+}
+.project-detail h3 {
+    color: #E2E2E2;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 16px;
+    letter-spacing: 2px;
+    position: relative;
+    padding-left: 65px;
+    margin-bottom: 1rem;
+}
+.project-detail h3::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 50px;
+    height: 1px;
+    background: #E2E2E2;
+}
+.project-detail p {
+    color: #6D6D6D;
+    padding-left: 65px;
+    line-height: 1.7;
+}
+.project-detail ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 30px 0 0 65px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.project-detail ul li {
+    margin: 10px 0 0;
+    padding: 0;
+    width: 33.33%;
+}
+.project-detail .has-bg-box-left::before, .project-detail .has-bg-box-right::before {
+    content: "";
+    width: 110vw;
+    height: 334px;
+    position: absolute;
+    top: 200px;
+    background: linear-gradient(270deg, #FE344A 0%, #F35816 100%);
+    left: -100%;
+    z-index: 0;
+}
+.project-detail .has-bg-box-right::before {
+    top: auto;
+    bottom: 0;
+    left: auto;
+    right: -100%;
+}
+.project-detail .has-bg-box-right {
+    padding: 0 0 150px;
+}
+.project-detail .has-bg-box-right ul, .project-detail .has-bg-box-right ul li {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    width: 100%;
+}
+.slider-arrows {
+    position: absolute;
+    left: 0;
+    bottom: 57px;
+}
+.slider-arrows span {
+    width: 80px;
+    height: 80px;
+    display: inline-block;
+    cursor: pointer;
+    background: url(../../projects/img/astra/slider-arrow-left.svg) no-repeat center center;
+}
+.slider-arrows span:last-child {
+    margin-left: 15px;
+    background: url(../../projects/img/astra/slider-arrow-right.svg) no-repeat center center;
+}
+.astra-project .brand-guidelines {
+    background: #252525;
+    padding: 10vh 0;
+    margin-top: 10vh;
+}
+.xloop-project {
+    background: #121133 url(../../projects/img/xloop/xloop-1.svg) no-repeat right top;
+    background-attachment: fixed;
+    color: #868697;
+}
+.xloop-project p {
+    color: #868697;
+}
+.xloop-project .all-projects {
+    color: #868697;
+}
+.xloop-project .has-bg-box-left::before, .xloop-project .has-bg-box-right::before {
+    background: #04A1D8;
+    top: 25%;
+}
+.xloop-project .has-bg-box-right {
+    padding-top: 140px;
+    margin-top: 140px;
+}
+.xloop-project .has-bg-box-right::before {
+    top: 0;
+    width: 150%;
+    height: 51%;
+}
+.xloop-project .brand-guidelines {
+    background: url(../../projects/img/xloop/xloop-5.png) no-repeat center top;
+    background-size: 100%;
+    padding: 7% 0 4%;
+}
+.xloop-project .brand-guidelines .container {
+    background: #F2FAFD;
+    padding: 0;
+}
+.xloop-project .brand-guidelines .top-section {
+    padding: 70px;
+    color: #54647A;
+}
+.xloop-project .brand-guidelines .top-section h3 {
+    color: #1B194A;
+}
+.xloop-project .brand-guidelines .top-section h3::before{
+    background: #1B194A;
+}
+.eshifa-project {
+    background: #fff;
+    color: rgba(0, 0, 0, 0.5);
+}
+.project-detail.eshifa-project .all-projects:hover {
+    color: #000;
+}
+.eshifa-project h2 {
+    color: #DC4158;
+}
+.project-detail.eshifa-project h3 {
+    color: #000;
+}
+.project-detail.eshifa-project h3::before {
+    background: #000;
+}
+.project-detail.alissa-project .has-bg-box-left::before, .project-detail.alissa-project .has-bg-box-right::before {
+    background: #EC1B2E;
+}
+.royal-store-project {
+    background: #0A1B2D;
+    color: #848D96;
+}
+.royal-store-project p {
+    color: #848D96;
+}
+.royal-store-project .all-projects {
+    color: #848D96;
+}
+
+.wa-chat-box-poweredby {
+    display: none !important;
+}
+.wa-chat-box-content-send-btn {
+    margin-bottom: 13px !important;
+}
+#wa-widget-send-button {
+    width: 50px !important;
+    height: 50px !important;
+    min-width: 50px !important;
+}
+#wa-widget-send-button svg {
+    width: 30px !important;
+    height: 30px !important;
+}
+.wa-chat-box {
+    margin-bottom: 64px !important;
+}
+.wa-chat-box-content-send-btn {
+    padding: 12px 0 !important;
+    text-decoration: none !important;
+}
+.wa-chat-box-content-send-btn-text {
+    text-decoration: none !important;
 }

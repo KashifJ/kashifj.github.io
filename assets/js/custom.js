@@ -6,12 +6,19 @@ $('#project-modal').on('show.bs.modal', function (e) {
     // or, load content from value of data-remote url
     modal.find('.modal-body').load(button.data("remote"));
     $("html").addClass( "modal-open" );
+
+
+    $('.slider-arrows .next').on("click", function(){
+      alert("ddd");
+    });
+
 });
 
     $('#project-modal').on("hide.bs.modal", function() {
         $("html").removeClass("modal-open");        
     }); 
 
+    
 
     var pages = [].slice.call(document.querySelectorAll('.pages > .page')),
       currentPage = 0,
@@ -64,4 +71,8 @@ $('#project-modal').on('show.bs.modal', function (e) {
                     handleHover: false,
                     handleResize: false
                 });
+
+
+                
+
             });
