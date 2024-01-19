@@ -2283,8 +2283,7 @@ footer .bottom-right .contact-area {
     }
 
     .close-modal {        
-        padding: 5vw !important;
-        padding-bottom: 150px !important;
+        padding: 5vw !important;        
     }
 
     #full-width {
@@ -3362,4 +3361,25 @@ footer .bottom-right .contact-area {
 }
 .wa-chat-box-content-send-btn-text {
     text-decoration: none !important;
+}
+@media screen and (max-width: 1199px) {
+    .project-detail h2 {
+        font-size: 10vw;
+    }
+}
+@media screen and (max-width: 991px) {
+    .project-detail ul li {
+        width: 100%;
+    }
+    .project-detail .has-bg-box-left::before, .project-detail .has-bg-box-right::before {
+        display: none;
+    }
+    .project-detail .has-bg-box-right {
+        padding: 0;
+    }
+}
+@media screen and (max-width: 768px) {
+    .project-detail h2 {
+        font-size: 14vw;
+    }
 }
