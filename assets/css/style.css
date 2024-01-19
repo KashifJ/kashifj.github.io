@@ -3382,4 +3382,10 @@ footer .bottom-right .contact-area {
     .project-detail h2 {
         font-size: 14vw;
     }
+    .justify-content-center .pl-5 {
+        padding-left: 15px !important
+    }
+    .justify-content-center .ml-5 {
+        margin-left: 0 !important;
+    }
 }
