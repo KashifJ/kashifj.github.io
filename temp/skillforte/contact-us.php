@@ -289,7 +289,7 @@
     <!--Contact Section end-->
     <!--offices Section Start-->
 
-    <section class="container-fluid dark visit footer-margin-bottom">
+    <section class="container-fluid dark visit footer-margin-bottom contact-offices">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
@@ -343,7 +343,7 @@
 
     <!--offices Section end-->
 
-    <footer class="container-fluid px-0 dark-bg">
+    <footer class="container-fluid px-0 dark-bg contact-footer">
         <div class="container">
             <!--Footer banner Start-->
             <div class="row wrapper-footer light text-center">
