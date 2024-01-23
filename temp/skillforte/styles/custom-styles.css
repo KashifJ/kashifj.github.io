@@ -30,10 +30,11 @@ strong {
 }
 
 h2 {
-    font-size: 6.125rem;
+    /* font-size: 6.125rem; */
+    font-size: 3.9vw;
     font-weight: 500;
-    letter-spacing: -7px;
-    line-height: 107px;
+    letter-spacing: -0.25vw;
+    line-height: 1;
     margin-bottom:0;
 }
 h3 {
@@ -44,10 +45,10 @@ h3 {
 }
 
 h4 {
-    font-size:3.875rem;
-    letter-spacing: -3.72px;
+    font-size:2.9vw;
+    letter-spacing: -0.15vw;
     font-weight: 500;
-    line-height: 76px;
+    line-height: 1;
 }
 
 h5 {
@@ -875,7 +876,7 @@ footer.home-footer {
 }
 .solution-logo img {
     width: auto;
-    max-width: 150px;
+    /* max-width: 150px; */
 }
 .pattern-light-left-bottom img,.pattern-light-right-bottom img  {
     width:100%;
@@ -1146,6 +1147,7 @@ footer.home-footer {
 .contact-banner.banner-content {
     max-width:930px;
     margin: auto;
+    position: relative;
 }
 /*Contact Us*/
 
@@ -1424,6 +1426,7 @@ footer.home-footer {
     min-height: 506px;
     position: relative;
     display: flow-root;
+    height: 100%;
   }
   .expertise-card .exp-img {
     text-align: right;
@@ -1531,7 +1534,7 @@ footer.home-footer {
     background: #3ef2a6;
     border-radius: 50px;
     overflow: hidden;
-    padding:12px 10px;
+    padding:12px 10px 12px 70px;
     color:#000;
     font-size: 18px;
     font-weight: 500;
@@ -1539,12 +1542,18 @@ footer.home-footer {
     left:auto;
     right:auto;
     top:-30px;
-    width: 930px;
-    max-width: 100%;
+    max-width: 930px;
+    width: 100%;
+    min-height: 66px;
+    display: flex;
+    align-items: center;
 }
 .message-sucess img {
     width:50px;
     margin-right: 10px;
+    position: absolute;
+    left: 12px;
+    top: 10px;
 }
 
 @media all and (max-width:1025px) {
@@ -1713,7 +1722,7 @@ footer.home-footer {
     }
     p {
         font-size: 1rem;
-        letter-spacing: -1px;
+        /* letter-spacing: -1px; */
         line-height: 1.2;
         font-weight: 300;
     }
@@ -1948,7 +1957,7 @@ footer.home-footer {
         max-width: 50%;
     }
     .solution-logo img {
-        max-width: 110px;
+        max-width: none;
     }
     .pattern-light-right-bottom:before {
         width: 70px;
@@ -2091,4 +2100,189 @@ footer.home-footer {
         padding-right:120px;
       }
       
+}
+
+@media all and (max-width:1700px) {
+    h2 {
+        font-size: 5vw;
+    }
+    h4 {
+        font-size:3.9vw;        
+    }   
+}
+
+@media all and (max-width:1199px) {
+    h2 {
+        font-size: 7vw;
+    }
+    .banner-section small {
+        font-size: 35px;
+        line-height: 1.3;
+    } 
+    h4 {
+        font-size:4.5vw;        
+    }
+    .faq-section .container {
+        max-width: 100%;
+    }  
+}
+
+@media all and (max-width:991px) {
+    .banner-image-content {
+        margin-top: 30px;
+    }
+    section {
+        padding: 100px 0;
+    }
+    .mb-110 {
+        margin-bottom: 60px;
+    }
+    .expertise-card .exp-img img {
+        width: 70px;
+    }
+    h4 {
+        font-size:6vw;        
+    }
+}
+
+@media all and (max-width:767px) {
+    h2 {
+        font-size: 12vw;
+    }
+    .banner-section small {
+        font-size: 25px;
+        line-height: 1.3;
+        letter-spacing: -1px;
+    }
+    .banner-section {
+        padding: 60px 0;
+    }
+    h3 {
+        font-size: 2rem;;
+    }
+    .home-logos-section .mt-5 {
+        margin-top: 0 !important;
+    }
+    .home-logos-section h3 {
+        margin: 0 !important;
+    }
+    section {
+        padding: 60px 0;
+    }
+    .banner-image-content p {
+        letter-spacing: 0;
+    }
+    .expertise-card {
+        height: auto;
+        padding-bottom: 100px;
+    }
+    .hover-icon {
+        opacity: 1;
+    }
+    .expertise-card .mb-40 {
+        margin: 20px 0 !important;
+    }
+    .expertise-card .exp-img img {
+        width: 50px;
+    }
+    h4 {
+        font-size:7vw;        
+    }  
+    .mb-110 {
+        margin-bottom: 20px;
+    }
+    .our-super-powers-section .col-md-6:not(:last-child) .pt-4 {
+        padding-top: 0 !important;
+    }
+    .home-about-us-section .mt-100 {
+        margin: 10px 0 0 !important;
+    }
+    .exp-column:nth-child(2) {
+        margin-top: 40px;
+    }
+    .exp-column .text-right {
+        text-align: left !important;
+        margin-top: 10px;
+    } 
+    .techonology-section {
+        margin-top: 30px;
+        margin-bottom: 0;
+    }
+    .techonology-section .mb-40 {
+        margin-bottom: 20px;
+    }
+    .techonology-section p {
+        padding-bottom: 30px;
+    }
+    .leadership .col {
+        max-width: 100%;
+        width: 100%;
+        flex: 0 0 100%;
+        margin-bottom: 30px
+    }
+    .about-ind-exp-section .exp-column:first-child {
+        padding: 0;
+    }
+    .about-ind-exp-section {
+        padding-bottom: 0;
+    }
+    .about-our-val-img, .about-our-val-txt {
+        padding-top: 40px;
+    }
+    .block-content {
+        margin-bottom: 0 !important;
+    }
+    .block-content span {
+        letter-spacing: -1px;
+        margin-bottom: 25px;
+    }
+    .about-our-val-txt .container {
+        padding-bottom: 0 !important;
+    }
+    .about-our-val-txt .container .mt-5:last-child {         
+        margin-bottom: 0 !important;
+    }
+    footer {
+        padding-bottom: 60px;
+    }
+    .leadership h4 {
+        margin-bottom: 30px;
+    }
+    .contact-form {
+        margin-top: 60px;
+    }
+    .contact-offices .py-5 {
+        padding-top: 0 !important;
+    }
+    .visit .pl-5 {
+        margin-bottom: 0 !important;
+    }
+    .visit .pl-5 {
+        padding-top: 10px !important;
+    }
+    .contact-footer, .enterprise-footer {
+        margin-top: 150px;
+    }
+    .solution-detail {
+        margin-bottom: 0;
+    }
+    .enterprise-section.first {
+        margin-top: 30px;
+    }
+    .enterprise-section h2 {
+        padding-bottom: 10px;
+    }
+    .p-55 {
+        padding: 30px;
+    }
+    .faq-section {
+        padding-bottom: 0 !important;
+    }
+    .faq-section .container h4 {
+        padding-bottom: 0 !important;
+        margin-bottom: 20px !important;
+    }
+    .border-doted {
+        margin-bottom: 50px;
+    }
 }
