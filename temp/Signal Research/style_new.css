@@ -1,0 +1,490 @@
+
+/*FIXED MENU BAR -----------------------------------*/
+
+.menu-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333; /* Change this to your desired background color */
+  color: #fff; /* Change this to your desired text color */
+  padding: 10px; /* Adjust padding as needed */
+  z-index: 100; /* Set a high z-index to ensure it's above other content */
+}
+
+.content {
+  padding-top: 50px; /* Adjust this value to match the height of your menu bar */
+}
+
+/*BUTTONS ---------------------------------------*/
+.round_corners {
+  max-width: 100%;
+  border-radius: 15px;
+}
+
+/*TEXT -----------------------------------------*/
+
+.text_center {
+  text-align: center;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.mouseover:hover {
+  cursor: pointer;
+  background-color: #dadada;
+}
+
+/*Text Color------------------------------ */
+
+.text_white {
+  color: white;
+}
+
+/*Background Color------------------------------ */
+.bg_color_blue {
+  background-color: #0000FF;
+}
+
+/* Datatable -----------------------------------------------------------------------*/
+.dataTables_wrapper .dataTables_filter{
+  float: none;
+  text-align: center;
+}
+
+
+/*scroll up -------------------------------------*/
+
+#upBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  left: 30px; /* Place the button 30px from the right */
+  z-index: 100; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: #1f3bb3; /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 10px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 14px; /* Increase font size */
+}
+
+#upBtn:hover {
+  background-color: #555; /* Add a dark-grey background on hover */
+}
+
+/*containers*/
+
+.chartContainer{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.hidden {
+  display: none;
+}
+
+/*SCREEN MANAGEMENT #######################################################*/
+
+@media only screen and (max-width: 576px) {
+  .text_size {
+    font-size: 12px;
+  }
+
+  .table_icon {
+    height: 25px
+  }
+
+}
+
+@media only screen and (min-width: 576px) {
+  .text_size {
+    font-size: 12px;
+  }
+
+  .table_icon {
+    height: 25px
+  }
+
+}
+
+@media only screen and (min-width: 768px) {
+  .text_size {
+    font-size: 14px;
+  }
+
+  .table_icon {
+    height: 25px
+  }
+
+}
+
+@media only screen and (min-width: 992px) {
+  .text_size {
+    font-size: 16px;
+  }
+
+  .table_icon {
+    height: 30px
+  }
+
+}
+
+@media only screen and (min-width: 1200px) {
+  .text_size {
+    font-size: 18px;
+  }
+
+  .table_icon {
+    height: 30px
+  }
+
+}
+
+/* Menu ---------------------------------------- */
+
+
+
+/*Other -----------------------------------------*/
+
+.centered-div {
+  width: 300px; /* Set your desired width */
+  margin: 0 auto; /* Center the div horizontally */
+  background-color: #f0f0f0; /* Set your desired background color */
+  text-align: center; /* Center text horizontally */
+  line-height: 100px; /* Center text vertically */
+  height: 100px; /* Set your desired height */
+}
+
+
+
+.hide-item {display: none;
+}
+
+/*!*=============== GOOGLE FONTS ===============*!*/
+/*@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");*/
+
+/*!*=============== VARIABLES CSS ===============*!*/
+/*:root {*/
+/*  !*========== Colors ==========*!*/
+/*  !*Color mode HSL(hue, saturation, lightness)*!*/
+/*  --first-color: hsl(244, 75%, 57%);*/
+/*  --second-color: hsl(249, 64%, 47%);*/
+/*  --title-color: hsl(244, 12%, 12%);*/
+/*  --text-color: hsl(244, 4%, 36%);*/
+/*  --body-color: hsl(208, 97%, 85%);*/
+/*  !*========== Font and typography ==========*!*/
+/*  !*.5rem = 8px | 1rem = 16px ...*!*/
+/*  --body-font: "Poppins", sans-serif;*/
+/*  --h2-font-size: 1.25rem;*/
+/*  --small-font-size: .813rem;*/
+/*  --smaller-font-size: .75rem;*/
+/*  !*========== Font weight ==========*!*/
+/*  --font-medium: 500;*/
+/*  --font-semi-bold: 600;*/
+/*}*/
+
+/*.login__form {*/
+/*  position: relative;*/
+/*  background-color: hsla(244, 16%, 92%, 0.6);*/
+/*  border: 2px solid hsla(244, 16%, 92%, 0.75);*/
+/*  margin-inline: 1.5rem;*/
+/*  row-gap: 1.25rem;*/
+/*  width: 50%;*/
+/*  backdrop-filter: blur(20px);*/
+/*  padding: 2rem;*/
+/*  border-radius: 1rem;*/
+/*}*/
+
+/*.login-form form {*/
+/*  margin-bottom: 15px;*/
+/*  background: #f7f7f7;*/
+/*  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);*/
+/*  padding: 30px;*/
+/*}*/
+
+/*.login-form h2 {*/
+/*  margin: 0 0 15px;*/
+/*}*/
+
+/*.login-form .hint-text {*/
+/*  color: #777;*/
+/*  padding-bottom: 15px;*/
+/*  text-align: center;*/
+/*  font-size: 13px;*/
+/*}*/
+
+/*.form-control,*/
+/*.btn {*/
+/*  min-height: 38px;*/
+/*  border-radius: 2px;*/
+/*}*/
+
+/*.login-btn {*/
+/*  font-size: 15px;*/
+/*  font-weight: bold;*/
+/*}*/
+
+/*.or-seperator {*/
+/*  margin: 20px 0 10px;*/
+/*  text-align: center;*/
+/*  border-top: 1px solid #ccc;*/
+/*}*/
+
+/*.or-seperator i {*/
+/*  padding: 0 10px;*/
+/*  background: #f7f7f7;*/
+/*  position: relative;*/
+/*  top: -11px;*/
+/*  z-index: 1;*/
+/*}*/
+
+/*.social-btn .btn {*/
+/*  margin: 10px 0;*/
+/*  font-size: 15px;*/
+/*  text-align: center;*/
+/*  !* line-height: 24px; *!*/
+/*}*/
+
+/*.social-btn .btn i {*/
+/*  float: left;*/
+/*  margin: 4px 15px 0 5px;*/
+/*  min-width: 15px;*/
+/*}*/
+
+/*.input-group-addon .fa {*/
+/*  font-size: 18px;*/
+/*}*/
+
+
+
+/*.login__description,*/
+/*.login__label,*/
+/*.login__button {*/
+/*  font-size: var(--normal-font-size);*/
+/*}*/
+
+/*.login__description {*/
+/*  font-size: var(--small-font-size);*/
+/*}*/
+
+/*.login__title {*/
+/*  color: var(--title-color);*/
+/*  font-size: var(--h2-font-size);*/
+/*  margin-bottom: 0.5rem;*/
+/*}*/
+
+/*.login__title span {*/
+/*  color: var(--first-color);*/
+/*}*/
+
+
+
+/*!* background img *!*/
+/*.login__content,*/
+/*.login__form,*/
+/*.login__inputs {*/
+/*  display: grid;*/
+/*}*/
+
+/*.login__content {*/
+/*  position: relative;*/
+/*  height: 100vh;*/
+/*  align-items: center;*/
+/*}*/
+
+
+/*@media screen and (max-width: 360px) {*/
+/*  .login__buttons {*/
+/*    flex-direction: column;*/
+/*  }*/
+
+
+/*}*/
+
+/*!* For medium devices *!*/
+/*@media screen and (max-width: 576px) {*/
+
+
+
+/*  .login__form {*/
+
+/*    width: 80%;*/
+/*    justify-self: center;*/
+/*    !* align-items: center; *!*/
+/*    margin-top: 50px !important;*/
+
+/*  }*/
+
+/*  .login__description,*/
+/*  .login__label,*/
+/*  .login__button {*/
+/*    font-size: 13px;*/
+/*  }*/
+/*}*/
+
+/*!* For large devices *!*/
+/*@media screen and (min-width: 1064px) {*/
+/*  .container {*/
+/*    height: 100vh;*/
+/*    display: grid;*/
+/*    place-items: center;*/
+/*  }*/
+
+/*  .login__content {*/
+/*    width: 1024px;*/
+/*    height: 600px;*/
+/*  }*/
+
+/*  .login__img {*/
+/*    border-radius: 3.5rem;*/
+/*    box-shadow: 0 24px 48px hsla(244, 75%, 36%, 0.45);*/
+/*  }*/
+
+/*  .login__form {*/
+/*    justify-self: flex-end;*/
+/*    margin-right: 4.5rem;*/
+/*  }*/
+/*}*/
+
+/*@media screen and (min-width: 1200px) {*/
+/*  .login__content {*/
+/*    height: 700px;*/
+/*  }*/
+
+/*  .login__form {*/
+/*    row-gap: 2rem;*/
+/*    padding: 3rem;*/
+/*    border-radius: 1.25rem;*/
+/*    border: 2.5px solid hsla(244, 16%, 92%, 0.75);*/
+/*  }*/
+
+/*  .login__description,*/
+/*  .login__label,*/
+/*  .login__button {*/
+/*    font-size: 20px;*/
+/*  }*/
+
+/*  .login__inputs {*/
+/*    row-gap: 1.25rem;*/
+/*    margin-bottom: 0.75rem;*/
+/*  }*/
+
+/*  .login__input {*/
+/*    border: 2.5px solid var(--text-color);*/
+/*    padding: 1rem;*/
+/*    font-size: var(--small-font-size);*/
+/*  }*/
+
+/*  .login__input:focus,*/
+/*  .login__input:valid {*/
+/*    border: 2.5px solid var(--first-color);*/
+/*  }*/
+
+/*  .login__button {*/
+/*    padding-block: 1rem;*/
+/*    margin-bottom: 1.25rem;*/
+/*  }*/
+
+/*  .login__button-ghost {*/
+/*    border: 2.5px solid var(--first-color);*/
+/*  }*/
+/*}*/
+
+/*@media screen and (min-width: 1064px) {*/
+/*  .container-fluid {*/
+/*    height: 100vh;*/
+/*    width: 100%;*/
+/*    display: grid;*/
+/*    place-items: center;*/
+/*    background-image: url('/public/img/bg.jpg');*/
+/*    background-size: cover;*/
+/*    !* Change from 'contain' to 'cover' to cover the entire container *!*/
+/*    background-position: center;*/
+/*    !* Center the background image *!*/
+/*    background-repeat: no-repeat;*/
+/*  }*/
+/*}*/
+
+/*@media screen and (max-width: 1063px) {*/
+/*  .container-fluid {*/
+/*    height: 100vh;*/
+/*    width: 100%;*/
+/*    display: grid;*/
+/*    place-items: center;*/
+/*    background-image: url('/public/img/bg.jpg');*/
+/*    background-size: cover;*/
+/*    !* Change from 'contain' to 'cover' to cover the entire container *!*/
+/*    background-position: center;*/
+/*    !* Center the background image *!*/
+/*    background-repeat: no-repeat;*/
+/*  }*/
+/*}*/
+
+
+
+/*!* Make text content stand out *!*/
+/*.container {*/
+/*  !* Add some background color to the text container to improve readability *!*/
+/*  background-color: rgba(255, 255, 255, 0.8);*/
+/*  !* Adjust opacity as needed *!*/
+/*  padding: 20px;*/
+/*  !* Add some padding for better spacing *!*/
+/*}*/
+
+/*.login__form {*/
+/*  margin: auto !important;*/
+/*  align-items: center;*/
+/*}*/
+
+
+/*!* google btn *!*/
+/*#google-signin:hover {*/
+/*  background-color: transparent;*/
+/*  !* Set the background color to transparent on hover *!*/
+/*  color: #000;*/
+/*  !* Set the text color to danger color on hover *!*/
+/*  border: 2px solid #dc3545;*/
+/*}*/
+
+/*#signUp:hover {*/
+/*  background-color: transparent;*/
+/*  !* Set the background color to transparent on hover *!*/
+/*  color: #000;*/
+/*  !* Set the text color to success color on hover *!*/
+/*  border: 2px solid #28a745;*/
+/*}*/
+
+/*#messageContainer {*/
+/*  position: fixed;*/
+/*  top: 10px;*/
+/*  left: 50%;*/
+/*  transform: translateX(-50%);*/
+/*  padding: 10px;*/
+/*  border-radius: 5px;*/
+/*  font-size: 14px;*/
+/*  color: #fff;*/
+/*  text-align: center;*/
+/*  width: 300px;*/
+/*  opacity: 0;*/
+/*  transition: opacity 0.3s ease-in-out;*/
+/*}*/
+
+/*#messageContainer.success {*/
+/*  background-color: #28a745;*/
+/*  !* Green background for success messages *!*/
+/*}*/
+
+/*#messageContainer.error {*/
+/*  background-color: #dc3545;*/
+/*  !* Red background for error messages *!*/
+/*}*/

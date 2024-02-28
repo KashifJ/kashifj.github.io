@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="../public/img/favicon.ico">
+  <link rel="stylesheet" href="css/style_new.css">
+
+  <title>Login</title>
+
+  <!-- Include the Firebase SDK scripts -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <!-- firebase config script files -->
+  <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-database-compat.js"></script>
+  <!-- boostrap file -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+</head>
+
+<body>
+  <!-- Container for Firebase UI -->
+  <div class="container-fluid">
+    <!-- <div class="login__content"> -->
+
+    <div class="login__form">
+      <div>
+
+        <p class="login__description">
+          Welcome! Please login to continue.
+        </p>
+        <p id="messageContainer">{{msg}}</p>
+      </div>
+      <!-- Container for Email/Password Sign-In -->
+      <form method="post" action="/login.html">
+        <div id="email-password-form">
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text">
+                <span class="fa fa-user"></span>
+              </span>
+            </div>
+            <input name="email" type="email" id="email" placeholder="Email" class="form-control">
+          </div>
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text">
+                <span class="fas fa-lock"></span>
+              </span>
+            </div>
+            <input name="password" type="password" id="password" placeholder="Password" class="form-control">
+          </div>
+          <div class="form-group social-btn">
+            <input type="submit" value="Login" id="signUp" class="btn  btn-success btn-block login-btn">
+
+          </div>
+          <!-- Container for Google Sign-In -->
+          <div class="text-center social-btn" id="google-signin-button">
+
+          </div>
+
+
+          <div class="text-right">
+            <a href="password_reset.html">Forgot Password?</a>
+          </div>
+        </div>
+      </form>
+
+      </div>
+      <!-- Add this button where you want the logout button to appear -->
+
+    </div>
+    <!-- </div> -->
+<!--  </div>-->
+
+</body>
+
+</html>
