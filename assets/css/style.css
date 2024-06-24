@@ -94,7 +94,8 @@ h3 {
 }
 
 a, p {
-    font-family: 'NeueMachina';
+	font-family: "Outfit", sans-serif;
+    /*font-family: 'NeueMachina';*/
     font-weight: 400;
     color: #000;
 }
