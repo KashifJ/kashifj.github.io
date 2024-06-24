@@ -121,7 +121,8 @@ a {
 }
 
 h4.sub-h {
-    font-family: 'NeueMachina';
+    /*font-family: 'NeueMachina';*/
+	font-family: "Outfit", sans-serif;
     font-size: 20px;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -299,7 +300,8 @@ h4.sub-h {
 }
 
 #footer-wrap h2 {
-    font-family: 'NeueMachina';
+	font-family: "Outfit", sans-serif;
+    /*font-family: 'NeueMachina';*/
     line-height: 0.9;
 }
 
@@ -1487,7 +1489,8 @@ h4.sub-h {
     text-align: left;
     line-height: 3em;
     text-transform: none;
-    font-family: 'NeueMachina';
+    /*font-family: 'NeueMachina';*/
+	font-family: "Outfit", sans-serif;
     font-size: 1vw;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -1586,7 +1589,8 @@ h4.sub-h {
 }
 
 .project-desc .did p {
-    font-family: 'NeueMachina';
+    /*font-family: 'NeueMachina';*/
+	font-family: "Outfit", sans-serif;
     display: block;
     margin-bottom: 0;
 }
@@ -1625,7 +1629,8 @@ h4.sub-h {
     color: #fff;
     font-size: 1.8vw;
     padding-top: 6vw;
-    font-family: 'NeueMachina';
+    /*font-family: 'NeueMachina';*/
+	font-family: "Outfit", sans-serif;
 }
 
 .about h3::first-line {
