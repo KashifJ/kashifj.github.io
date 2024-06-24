@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
 body, html {
     overflow-x: hidden;
     backface-visibility: hidden;
-    font-family: 'NeueMachina';
+    /*font-family: 'NeueMachina';*/
+	font-family: "Outfit", sans-serif;
 }
 
 html {
