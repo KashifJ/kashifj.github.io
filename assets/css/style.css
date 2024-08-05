@@ -242,6 +242,14 @@ h4.sub-h {
     overflow: hidden;
     background-size: cover;
     background-position: center center;
+    -webkit-transition: .35s ease-in-out;
+    -moz-transition: .35s ease-in-out;
+    -o-transition: .35s ease-in-out;
+    transition: .35s ease-in-out;
+}
+
+#work a:hover .portfolio-img {
+    transform: scale(1.1);
 }
 
 .img-one {
