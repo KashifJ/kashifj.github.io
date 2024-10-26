@@ -6,3 +6,19 @@ https://test.signal-research.biz/exchange_search
 https://xd.adobe.com/view/e7e62d92-6f54-409b-91d4-ae41e9c01c99-b2b5/screen/b64828dc-afe8-4e0a-b843-3fa0d109fed7/
 
 https://xd.adobe.com/view/e7e62d92-6f54-409b-91d4-ae41e9c01c99-b2b5/
+
+
+1.	Procedures tab 
+Template for procedures needs to be designed that will be connected to website CMS for data population and individual pages.
+
+2.	Affiliates Tab
+Affiliate pages are also missing and they might require a separate odoo module to enter affiliates information, there rankings and other details. On these pages there need to be a client-side functionality to filter by cities and categories.
+
+3.	Plots page
+A landing page styled page that will display details of plot types and other relevant information related to DHA’s main product.
+
+4.	Facilities by DHA
+There are multiple sub projects of DHA such as orchard, cricket ground, etc. Those each will require a separate page for them and most of these facilities will have a lead generation option that will be connected to CRM like we discussed on today’s call.
+
+5.	3D View
+360 images based virtual tour of DHA Quetta like the current one our website.
