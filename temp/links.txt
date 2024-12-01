@@ -7,6 +7,8 @@ https://xd.adobe.com/view/e7e62d92-6f54-409b-91d4-ae41e9c01c99-b2b5/screen/b6482
 
 https://xd.adobe.com/view/e7e62d92-6f54-409b-91d4-ae41e9c01c99-b2b5/
 
+https://xd.adobe.com/view/e7e62d92-6f54-409b-91d4-ae41e9c01c99-b2b5/
+
 
 1.	Procedures tab 
 Template for procedures needs to be designed that will be connected to website CMS for data population and individual pages.
