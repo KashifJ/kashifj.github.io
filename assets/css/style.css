@@ -1333,7 +1333,7 @@ h4.sub-h {
     /* For Safari 3.0 to 6.0 */
     transition: all .3s !important;
     /* For modern browsers */
-    font-size: 16px;
+    font-size: 14px;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
