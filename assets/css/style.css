@@ -120,6 +120,10 @@ a {
     background: #a83143 !important;
 }
 
+.close-project {
+	z-index: 9999;
+}
+
 h4.sub-h {
     /*font-family: 'NeueMachina';*/
 	font-family: "Outfit", sans-serif;
