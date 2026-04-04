@@ -3308,6 +3308,7 @@ footer .bottom-right .contact-area {
     top: 0;
     width: 150%;
     height: 51%;
+	opacity: 0.5;
 }
 .xloop-project .brand-guidelines {
     background: url(../../projects/img/xloop/xloop-5.png) no-repeat center top;
