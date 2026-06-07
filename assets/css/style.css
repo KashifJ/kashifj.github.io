@@ -3064,10 +3064,11 @@ footer .bottom-right .contact-area {
     color: #fff;
 }
 .skills li span {
-    padding: 15px 30px;
+    padding: 10px 35px;
     border: 2px solid rgba(255, 255, 255, 0.2);
     display: block;
-    font-size: 1.5vw;
+    font-size: 1.3vw;
+	border-radius: 50px;
 }
 
 @media only screen and (max-width:1550px) {
