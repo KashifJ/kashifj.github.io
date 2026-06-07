@@ -12,7 +12,7 @@ if (document.documentElement.clientWidth > 991) {
     new ScrollMagic.Scene({
         triggerElement: "#pinMaster",
         triggerHook: "onLeave",
-        duration: "520%"
+        duration: "420%"
     }).setPin("#pinMaster").setTween(tl).addTo(controller);
     $("section").each(function (i) {
         var picOverlay = $(this).find(".overlay");
