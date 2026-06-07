@@ -681,7 +681,7 @@ var _gsScope="undefined"!=typeof module&&module.exports&&"undefined"!=typeof glo
         new ScrollMagic.Scene({
             triggerElement: "#pinMaster",
             triggerHook: "onLeave",
-            duration: "420%"
+            duration: "520%"
         }).setPin("#pinMaster").setTween(tl).addTo(controller);
         $("section").each(function (i) {
             var picOverlay = $(this).find(".overlay");
