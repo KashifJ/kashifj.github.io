@@ -32,3 +32,8 @@ There are multiple sub projects of DHA such as orchard, cricket ground, etc. Tho
 
 5.	3D View
 360 images based virtual tour of DHA Quetta like the current one our website.
+
+
+Portfolio case studies:
+https://www.figma.com/make/tiieN8FiUmMbKNtjf85Ona/Portfolio-Case-Study-Design?code-node-id=0-9&p=f&fullscreen=1
+https://www.figma.com/make/8lLxfwM7wIoIdMzPYjIy2P/Portfolio-Case-Study-Design?fullscreen=1&t=cE87eljBsjEXhDDD-1&code-node-id=0-9
