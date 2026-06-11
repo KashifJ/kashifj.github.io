@@ -1291,6 +1291,26 @@ $('#project-modal').on('show.bs.modal', function (e) {
     // or, load content from value of data-remote url
     modal.find('.modal-body').load(button.data("remote"));
     $("html").addClass( "modal-open" );
+
+	$('.owl-carousel').owlCarousel({
+                    loop:true,
+                    margin:20,
+                    nav:false,
+                    dots:false,
+                    responsive:{
+                        0:{
+                            items:1
+                        },
+                        600:{
+                            items:1
+                        },
+                        1000:{
+                            items:1
+                        }
+                    }
+                });
+
+	
 });
 
     $('#project-modal').on("hide.bs.modal", function() {
