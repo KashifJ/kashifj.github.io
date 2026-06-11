@@ -173,35 +173,35 @@ h2 {
     display: block;
     color: #212529;
 }
-.box {
+.cs-box {
     border-radius: 1rem;
     border: 1px solid rgb(229, 237, 255);
     padding: 30px;
     margin-top: 30px;
 }
-.box .box-h-left {
+.cs-box .box-h-left {
     font-size: 14px;
     color: #6a7282;
 }
-.box strong {
+.cs-box strong {
     font-size: 18px;
     font-weight: bold;
     color: #212529;
     display: block;
 }
-.box p {
+.cs-box p {
     border-left: 3px solid #2D82FF;
     padding-left: 18px;
     font-size: 18px;
     margin-top: 28px;
 }
-.box .box-list li {
+.cs-box .box-list li {
     position: relative;
     padding-left: 15px;
     font-size: 14px;
     margin-top: 5px;
 }
-.box .box-list li::before {
+.cs-box .box-list li::before {
     content: "";
     position: absolute;
     top: 8px;
@@ -211,7 +211,7 @@ h2 {
     width: 5px;
     height: 5px;
 }
-.box .box-list.orange li::before {
+.cs-box .box-list.orange li::before {
     background: #fbbc09;
 }
 .dark-bg {
