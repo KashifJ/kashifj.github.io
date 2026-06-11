@@ -4762,7 +4762,7 @@ $('#project-modal').on('show.bs.modal', function (e) {
                         }
                     }
                 });
-		}, 5000);
+		}, 2000);
 
 	
 });
