@@ -4744,7 +4744,8 @@ $('#project-modal').on('show.bs.modal', function (e) {
     modal.find('.modal-body').load(button.data("remote"));
     $("html").addClass( "modal-open" );
 
-	$('.owl-carousel').owlCarousel({
+	setTimeout(function() {
+		$('.owl-carousel').owlCarousel({
                     loop:true,
                     margin:20,
                     nav:false,
@@ -4761,6 +4762,7 @@ $('#project-modal').on('show.bs.modal', function (e) {
                         }
                     }
                 });
+		}, 5000);
 
 	
 });
@@ -4768,7 +4770,9 @@ $('#project-modal').on('show.bs.modal', function (e) {
     $('#project-modal').on("hide.bs.modal", function() {
         $("html").removeClass("modal-open");    
 		var modal = $(this);
-		modal.find('.modal-body').html("");
+		setTimeout(function() {
+			modal.find('.modal-body').html("");
+		}, 500);
     }); 
 
 
