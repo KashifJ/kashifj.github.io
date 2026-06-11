@@ -170,7 +170,7 @@
                 <div class="col-lg-7 p-0">
                     <div class="box">
                         <div class="img-wrapper">
-                            <a href="project-modal" data-remote="projects/jobfastic.html" data-toggle="modal" data-target="#project-modal">
+                            <a href="project-modal" data-remote="case-studies/jobfastic/jobfastic.html" data-toggle="modal" data-target="#project-modal">
                             <div class="portfolio-img img-four"></div>
                             </a>
                             <div class="overlay"></div>
@@ -752,6 +752,7 @@
     </main>
 
     <script src='assets/js/kashifj.js'></script>
+    <script src='assets/js/owl.carousel.js'></script>
     
     
     <script>
@@ -784,6 +785,28 @@
         };
         var x = document.getElementsByTagName('script')[0];
         x.parentNode.insertBefore(s, x);
+
+
+        $(document).ready(function(){
+                $('.owl-carousel').owlCarousel({
+                    loop:true,
+                    margin:20,
+                    nav:false,
+                    dots:false,
+                    responsive:{
+                        0:{
+                            items:1
+                        },
+                        600:{
+                            items:1
+                        },
+                        1000:{
+                            items:1
+                        }
+                    }
+                })
+            });
+      
     </script>
 
 </body>
