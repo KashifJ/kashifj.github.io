@@ -363,4 +363,6 @@
    .cs-header .container-fluid {
        padding: 0;
     }
+                        .close-case-study span {display: none;}
+                        .close-case-study svg {margin:0}
 }
