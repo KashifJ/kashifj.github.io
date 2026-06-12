@@ -1,9 +1,9 @@
-ul, li {
+.case-study-jobfastic ul, .case-study-jobfastic li {
     padding: 0;
     margin: 0;
     list-style: none;
 }
-p {
+.case-study-jobfastic p {
     color: #6a7282;
     font-size: 18px;
     font-weight: normal;
@@ -18,7 +18,7 @@ p {
     -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);
     padding: 10px;
-    z-index: 1;
+    z-index: 99999;
     border-bottom: 1px solid rgb(229, 237, 255);
 }
 .cs-header .container-fluid {
@@ -51,13 +51,13 @@ p {
     background: #2C76E1;
     text-decoration: none;
 }
-.section {
+.case-study-jobfastic .section {
     padding: 6rem 0;
 }
-.hero {
+.case-study-jobfastic .hero {
     background: linear-gradient(135deg, rgb(235, 243, 255) 0%, rgb(246, 248, 255) 50%, rgb(255, 255, 255) 100%);    
     margin-top: 79px;
-    padding: 5rem;
+    padding: 5rem 0;
 }
 .capsule-blue {
     list-style: none;    
@@ -80,7 +80,7 @@ p {
     background: #fff8e3;
     color: #fbbc09;
 }
-h1 {
+.case-study-jobfastic h1 {
     font-weight: bold;
     margin-top: 30px;
     margin-bottom: 30px;
@@ -88,10 +88,10 @@ h1 {
     line-height: 1;
     color: #212529;
 }
-h1 span {
+.case-study-jobfastic h1 span {
     color: #2D82FF;
 }
-.hero p {    
+.case-study-jobfastic .hero p {    
     margin-bottom: 40px;
     font-size: 20px;
 }
@@ -115,7 +115,7 @@ h1 span {
     letter-spacing: 3px;
     font-size: 11px;
 }
-h2 {
+.case-study-jobfastic h2 {
     font-weight: bold;
     font-size: 1.7rem;
     text-transform: none;
@@ -351,4 +351,16 @@ h2 {
     font-size: 20px;
     display: block;
     margin-top: 5px;
+}
+
+                    @media screen and (max-width: 992px) {
+   .nps {
+        width: 100%;
+    }
+}
+
+                    @media screen and (max-width: 767px) {
+   .cs-header .container-fluid {
+       padding: 0;
+    }
 }
