@@ -457,7 +457,7 @@
     border-radius: 50%;
     background: #bcc1cf;
     filter: blur(200px);
-    z-index: -2;
+    z-index: 0;
 }
 .wireframes-list li:nth-child(2):before {
     background: #45b374;
@@ -478,6 +478,9 @@
 .wireframes-list li:nth-child(6):before {
     background: #fbbc09;
     opacity: 0.1;
+}
+.wireframes-list li img {
+    position: relative;
 }
 .wireframes-tabs li {
     margin-bottom: 16px;
