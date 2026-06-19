@@ -4765,6 +4765,29 @@ $('#project-modal').on('show.bs.modal', function (e) {
                         }
                     }
                 });
+
+				$(".wireframes-tabs a").on("click", function(){
+
+                    $(".wireframes-tabs a").each(function(){
+                        $(this).removeClass("active");
+                    });
+
+                    $(this).addClass("active");
+                    
+                    var linkUrl = $(this).attr("data-url");
+
+                    $(".wireframes-list li").each(function(){
+                        $(this).removeClass("active");
+                        var imgUrl = $(this).attr("data-url");
+
+                        if (linkUrl == imgUrl) {
+                            $(this).addClass("active");
+                        }
+
+                    });
+					
+                });
+		
 		}, 2000);
 
 	
