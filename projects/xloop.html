@@ -10,12 +10,74 @@
         .close-project:hover {
             opacity: 0.7;
         }
+    .cs-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(10, 10, 32, 0.8);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    padding: 10px;
+    z-index: 99999;
+    border-bottom: 1px solid #0a0a20;
+}
+
+.cs-header .container-fluid {
+    padding: 0 10%;
+}
+
+.cs-header span {
+    font-size: 12px;
+    letter-spacing: 3px;   
+    color: #fff;
+}
+
+.close-case-study {
+    background: #04A1D8;
+    color: #fff;
+    font-weight: 500;
+    letter-spacing: 3px;
+    display: block;
+    padding: 10px 10px 10px 15px;
+    border-radius: 10px;
+    font-size: 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+}
+
+.close-case-study svg {
+    margin-left: 7px;
+}
+
+.close-case-study:hover {
+    color: #fff;    
+    text-decoration: none;
+  background: #018aba;
+}
     </style>
 
+  <div class="cs-header">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col d-flex align-items-center justify-content-between">                            
+                            <img src="projects/img/xloop/xloop-logo.svg" alt="xloop" style="max-width: unset !important; margin: 0; width: auto;">
+                            <span>CASE STUDY</span>
+                            <a href="#" data-dismiss="modal" class="close-case-study" title="Back to Projects">
+                               <span>Back to Case Studies</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#fff"><path d="m251.33-204.67-46.66-46.66L433.33-480 204.67-708.67l46.66-46.66L480-526.67l228.67-228.66 46.66 46.66L526.67-480l228.66 228.67-46.66 46.66L480-433.33 251.33-204.67Z"></path></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
   <div class="xloop-project project-detail" style="padding: 0;">
-    <a href="javascript:;" data-dismiss="modal" class="close-project">        
+   <!-- <a href="javascript:;" data-dismiss="modal" class="close-project">        
         <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#fff"><path d="m251.33-204.67-46.66-46.66L433.33-480 204.67-708.67l46.66-46.66L480-526.67l228.67-228.66 46.66 46.66L526.67-480l228.66 228.67-46.66 46.66L480-433.33 251.33-204.67Z"></path></svg>
-    </a>
+    </a> -->
     <div class="container">      
         <div class="row">          
            <!-- <div class="col-12">
