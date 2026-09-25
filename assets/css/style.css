@@ -70,7 +70,8 @@ a:active, a:focus, a:visited {
 h1, h2, h3, h4, h5 {
     font-family: 'BasisGrotesque';
     font-weight: 400;
-    color: #000;
+    /*color: #000;*/
+	color: #1D1F21;
 }
 
 h2 {
@@ -97,11 +98,13 @@ a, p {
 	font-family: "Outfit", sans-serif;
     /*font-family: 'NeueMachina';*/
     font-weight: 400;
-    color: #000;
+    /*color: #000;*/
+	color: #1D1F21;
 }
 
 a {
-    color: #000;
+    /*color: #000;*/
+	color: #1D1F21;
 }
 
 .btn-primary {
@@ -324,7 +327,8 @@ h4.sub-h {
 }
 
 #footer-wrap h2, #footer-wrap h4, #footer-wrap a, #footer-wrap p {
-    color: #000;
+    /*color: #000;*/
+	color: #1D1F21;
 }
 
 #footer-wrap h2 {
@@ -1098,8 +1102,9 @@ h4.sub-h {
 .reveal-line {
     width: 0px;
     height: 1px;
-    display: inline-block;
-    background: #000;
+    display: inline-block;    
+	/*background: #000;*/
+	color: #1D1F21;
     margin-bottom: 6px;
     -webkit-animation: yas 1s ease forwards;
     -moz-animation: yas 1s ease forwards;
@@ -1243,11 +1248,11 @@ h4.sub-h {
 }
 
 .dot {
-    background-image: -webkit-linear-gradient(270deg, #fff, #000);
-    background-image: -moz-linear-gradient(270deg, #fff, #000);
-    background-image: -o-linear-gradient(270deg, #fff, #000);
-    background-image: -ms-linear-gradient(270deg, #fff, #000);
-    background-image: linear-gradient(180deg, #fff, #000);
+    background-image: -webkit-linear-gradient(270deg, #fff, #1D1F21);
+    background-image: -moz-linear-gradient(270deg, #fff, #1D1F21);
+    background-image: -o-linear-gradient(270deg, #fff, #1D1F21);
+    background-image: -ms-linear-gradient(270deg, #fff, #1D1F21);
+    background-image: linear-gradient(180deg, #fff, #1D1F21);
 }
 
 #profile .dot {
@@ -1262,11 +1267,11 @@ h4.sub-h {
 }
 
 #profile .dot {
-    background-image: -webkit-linear-gradient(270deg, #fff, #000);
-    background-image: -moz-linear-gradient(270deg, #fff, #000);
-    background-image: -o-linear-gradient(270deg, #fff, #000);
-    background-image: -ms-linear-gradient(270deg, #fff, #000);
-    background-image: linear-gradient(180deg, #fff, #000);
+    background-image: -webkit-linear-gradient(270deg, #fff, #1D1F21);
+    background-image: -moz-linear-gradient(270deg, #fff, #1D1F21);
+    background-image: -o-linear-gradient(270deg, #fff, #1D1F21);
+    background-image: -ms-linear-gradient(270deg, #fff, #1D1F21);
+    background-image: linear-gradient(180deg, #fff, #1D1F21);
 }
 
 .wrapper {
@@ -1305,7 +1310,8 @@ h4.sub-h {
 }
 
 .logo a {
-    color: #000;
+    /*color: #000;*/
+	color: #1D1F21;
     -webkit-transition: all .3s !important;
     /* For Safari 3.0 to 6.0 */
     transition: all .3s !important;
@@ -1330,7 +1336,8 @@ h4.sub-h {
 
 .header a:hover {
     text-decoration: none;
-    color: #000;
+    /*color: #000;*/
+	color: #1D1F21;
 }
 
 .navbar {
@@ -1348,7 +1355,8 @@ h4.sub-h {
     color: inherit;
     text-decoration: none;
     line-height: 24px;
-    color: #000;
+    /*color: #000;*/
+	color: #1D1F21;
     -webkit-transition: all .3s !important;
     /* For Safari 3.0 to 6.0 */
     transition: all .3s !important;
@@ -1372,8 +1380,9 @@ h4.sub-h {
     left: 0;
     bottom: 0;
     width: 100%;
-    height: 1px;
-    background: #000;
+    height: 1px;    
+	/*background: #000;*/
+	color: #1D1F21;
     transform: scaleX(0);
 }
 
@@ -1382,7 +1391,8 @@ h4.sub-h {
 }
 
 .navbar a:hover {
-    color: #000;
+    /*color: #000;*/
+	color: #1D1F21;
 }
 
 .dark a:hover {
@@ -1398,7 +1408,8 @@ h4.sub-h {
     color: inherit;
     text-decoration: none;
     line-height: 24px;
-    color: #000;
+    /*color: #000;*/
+	color: #1D1F21;
     /*font-size: 24px;*/
 }
 
@@ -1412,8 +1423,9 @@ h4.sub-h {
     left: 0;
     bottom: 0;
     width: 100%;
-    height: 2px;
-    background: #000;
+    height: 2px;    
+	/*background: #000;*/
+	color: #1D1F21;
     transform: scaleX(0);
 }
 
@@ -1426,7 +1438,8 @@ h4.sub-h {
     color: inherit;
     text-decoration: none;
     line-height: 24px;
-    color: #000;
+    /*color: #000;*/
+	color: #1D1F21;
 }
 
 #footer-wrap a:before, #footer-wrap a > span:before, #footer-wrap a:after, #footer-wrap a > span:after {
@@ -1440,7 +1453,8 @@ h4.sub-h {
     bottom: 0;
     width: 100%;
     height: 2px;
-    background: #000;
+    /*background: #000;*/
+	color: #1D1F21;
     transform: scaleX(0);
 }
 
@@ -1474,7 +1488,8 @@ h4.sub-h {
     display: block;
     font-size: 8vw;
     line-height: 0.8;
-    color: #000;
+    /*color: #000;*/
+	color: #1D1F21;
     text-transform: uppercase;
     font-family: "MonumentExtended UltraBold";
 }
@@ -1628,8 +1643,9 @@ h4.sub-h {
     font-size: 22px;
 }
 
-.about {
-    background: #000;
+.about {    
+	/*background: #000;*/
+	color: #1D1F21;
     padding: 10vw 0;
     color: #fff;
     position: relative;
@@ -1773,7 +1789,8 @@ h4.sub-h {
     position: absolute;
     left: 0;
     top: 0;
-    background: #000;
+    /*background: #000;*/
+	color: #1D1F21;
     width: 100%;
     height: 100%;
 }
@@ -1796,7 +1813,8 @@ h4.sub-h {
     position: absolute;
     left: 0;
     top: 0;
-    background: #000;
+    /*background: #000;*/
+	color: #1D1F21;
     width: 100%;
     height: 100%;
 }
@@ -1806,7 +1824,8 @@ h4.sub-h {
     position: absolute;
     left: 0;
     top: 0;
-    background: #000;
+    /*background: #000;*/
+	color: #1D1F21;
     width: 100%;
     height: 100%;
 }
@@ -1874,8 +1893,9 @@ footer {
     text-decoration: none;
 }
 
-.footer .menu li a:hover {
-    color: #000;
+.footer .menu li a:hover {    
+	/*color: #000;*/
+	color: #1D1F21;
     text-decoration: none;
 }
 
@@ -2228,7 +2248,8 @@ footer {
 
 .text-hover {
     cursor: pointer !important;
-    color: #000;
+    /*color: #000;*/
+	color: #1D1F21;
 }
 
 #ball {
@@ -2802,7 +2823,8 @@ footer .bottom-right .contact-area {
 
 .modal-body .cta-last a:hover {
     text-decoration: none;
-    color: #000;
+    /*color: #000;*/
+	color: #1D1F21;
 }
 
 .modal-body .cta-last ul {
@@ -3186,8 +3208,9 @@ footer .bottom-right .contact-area {
     }
 }
 
-.astra-project, .xloop-project, .eshifa-project, .royal-store-project {
-    background: #000;
+.astra-project, .xloop-project, .eshifa-project, .royal-store-project {    
+	/*background: #000;*/
+	color: #1D1F21;
     min-height: 100vh;
     padding: 6vh 0 0;
     color: #6D6D6D;
@@ -3350,17 +3373,20 @@ footer .bottom-right .contact-area {
     background: #fff;
     color: rgba(0, 0, 0, 0.5);
 }
-.project-detail.eshifa-project .all-projects:hover {
-    color: #000;
+.project-detail.eshifa-project .all-projects:hover {    
+	/*color: #000;*/
+	color: #1D1F21;
 }
 .eshifa-project h2 {
     color: #DC4158;
 }
 .project-detail.eshifa-project h3 {
-    color: #000;
+    /*color: #000;*/
+	color: #1D1F21;
 }
-.project-detail.eshifa-project h3::before {
-    background: #000;
+.project-detail.eshifa-project h3::before {    
+	/*background: #000;*/
+	color: #1D1F21;
 }
 .project-detail.alissa-project .has-bg-box-left::before, .project-detail.alissa-project .has-bg-box-right::before {
     background: #EC1B2E;
