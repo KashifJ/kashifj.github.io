@@ -2940,7 +2940,8 @@ footer .bottom-right .contact-area {
 }
 
 .about .strokes div {
-    background: #1c1c1c;
+    /*background: #1c1c1c;*/
+	background: #2a2c2f;
 }
 
 .strokes div:nth-child(4),
