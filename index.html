@@ -228,14 +228,14 @@
                         </div>
     
                         <div class="col-lg-12 align-self-lg-center">
-                            <h4 class="sub-h"><span class="did" letters-slide-up text-split>02. Astra</span></h4>
-                            <h3 letters-slide-up text-split>The Unmanned Traffic Management System</h3>
+                            <h4 class="sub-h"><span class="did" letters-slide-up-1 text-split>02. Astra</span></h4>
+                            <h3 letters-slide-up-1 text-split>The Unmanned Traffic Management System</h3>
                         </div>
                         <div class="col-lg-12 align-self-lg-end copy">
-                            <p letters-slide-up text-split>AstraUTM is an advanced full stack UTM system that caters to Authorities, ANSPs, Solution Developers & Drone operators, with tools & applications encompassing all possible UTM workflows.</p>
+                            <p letters-slide-up-1 text-split>AstraUTM is an advanced full stack UTM system that caters to Authorities, ANSPs, Solution Developers & Drone operators, with tools & applications encompassing all possible UTM workflows.</p>
                             <div class="contact-area" style="transform: matrix(1, 0, 0, 1, 0, 0);">
                                 <div class="text-hover" style="transform: matrix(1, 0, 0, 1, 0, 0);">
-                                    &mdash;&nbsp;&nbsp;<a class="link ctn-atractive modallink" href="project-modal" data-remote="projects/astra.html" data-toggle="modal" data-target="#project-modal" letters-slide-up text-split>View</a>
+                                    &mdash;&nbsp;&nbsp;<a class="link ctn-atractive modallink" href="project-modal" data-remote="projects/astra.html" data-toggle="modal" data-target="#project-modal" letters-slide-up-1 text-split>View</a>
                                 </div>
                             </div>
                         </div>
@@ -841,6 +841,20 @@
             });  
             createScrollTrigger(element, tl);
           });
+
+          const lettersSlideUpElements = document.querySelectorAll("[letters-slide-up-1]");
+          lettersSlideUpElements.forEach((element) => {
+            const tl = gsap.timeline({ paused: true });
+            const chars = element.querySelectorAll(".char");
+            tl.from(chars, {
+              yPercent: 100,
+              duration: 0.35,
+              ease: "power1.out",
+              stagger: { amount: 0.6 },
+            });  
+            createScrollTrigger(element, tl);
+          });
+          
       });
       
     </script>
