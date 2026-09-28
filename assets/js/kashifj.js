@@ -725,21 +725,25 @@ var _gsScope="undefined"!=typeof module&&module.exports&&"undefined"!=typeof glo
 
 		$("section").each(function (i) {
 
-			$(this).find(".project-desc h3, .project-desc h4, .project-desc p, .project-desc .text-hover").each(function (j) {
+			var tl = new TimelineMax();
+		
+			$(this).find(".project-desc h3, .project-desc h4, .project-desc p, .modallink").each(function () {
 		
 				var $heading = $(this);
 		
-				// Split text into words
-				var words = $heading.text().split(" ");
+				// Split text into words once
+				if (!$heading.find(".word").length) {
 		
-				$heading.html(
-					words.map(function(word) {
-						return '<span class="word">' + word + '</span>';
-					}).join(" ")
-				);
+					var words = $heading.text().split(" ");
 		
-				var tl = new TimelineMax();
+					$heading.html(
+						words.map(function (word) {
+							return '<span class="word">' + word + '</span>';
+						}).join(" ")
+					);
+				}
 		
+				// Add to same timeline
 				tl.staggerFromTo(
 					$heading.find(".word"),
 					0.6,
@@ -752,20 +756,24 @@ var _gsScope="undefined"!=typeof module&&module.exports&&"undefined"!=typeof glo
 						y: 0,
 						ease: Power4.easeInOut
 					},
-					0.08 // delay between words
+					0.05
 				);
 		
-				new ScrollMagic.Scene({
-					triggerElement: "#pinMaster",
-					triggerHook: 0,
-					offset: (i * offset - 50)
-				})
-				.setTween(tl)
-				.addTo(controller);
+				// Small gap before next element starts
+				tl.add("+=0.2");
 		
 			});
 		
-		});		
+			new ScrollMagic.Scene({
+				triggerElement: "#pinMaster",
+				triggerHook: 0,
+				offset: (i * offset - 100)
+			})
+			.setTween(tl)
+			.addTo(controller);
+		
+		});
+		
 
 		$("#profile").each(function (i) {
 
