@@ -4899,6 +4899,8 @@ $('#project-modal').on('show.bs.modal', function (e) {
  
 					var $section = $(this);
 					var $sectionClass = $section.attr("data-url");
+
+					console.log($sectionClass);
 					 
 					new ScrollMagic.Scene({
 						triggerElement: this,
