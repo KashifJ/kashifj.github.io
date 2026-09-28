@@ -45,6 +45,15 @@
         gtag('config', 'G-HSL97CSM95');
     </script>
 
+  <style>
+    .word {
+      overflow: hidden;
+      padding-bottom: 0.1em;
+      margin-bottom: -0.1em;
+      transform-origin: bottom;
+    }
+  </style>
+
 </head>
 <body>
 
@@ -189,14 +198,14 @@
                         </div>
     
                         <div class="col-lg-12 align-self-lg-center">
-                            <h4 class="sub-h"><span class="did">01. JobFastic</span></h4>
-                            <h3>Search, Apply and Get Your Dream Job</h3>
+                            <h4 class="sub-h"><span class="did" letters-slide-up text-split>01. JobFastic</span></h4>
+                            <h3 letters-slide-up text-split>Search, Apply and Get Your Dream Job</h3>
                         </div>
                         <div class="col-lg-12 align-self-lg-end copy">
-                            <p>Find the job that’s perfect for you. About 800+ new jobs everyday.</p>
+                            <p letters-slide-up text-split>Find the job that’s perfect for you. About 800+ new jobs everyday.</p>
                             <div class="contact-area" style="transform: matrix(1, 0, 0, 1, 0, 0);">
                                 <div class="text-hover" style="transform: matrix(1, 0, 0, 1, 0, 0);">
-                                    &mdash;&nbsp;&nbsp;<a class="link ctn-atractive modallink" href="project-modal" data-remote="case-studies/jobfastic/jobfastic.html" data-toggle="modal" data-target="#project-modal">View</a>
+                                    &mdash;&nbsp;&nbsp;<a class="link ctn-atractive modallink" href="project-modal" data-remote="case-studies/jobfastic/jobfastic.html" data-toggle="modal" data-target="#project-modal" letters-slide-up text-split>View</a>
                                 </div>
                             </div>
                         </div>
@@ -788,6 +797,20 @@
         };
         var x = document.getElementsByTagName('script')[0];
         x.parentNode.insertBefore(s, x);
+
+
+      const lettersSlideUpElements = document.querySelectorAll("[letters-slide-up]");
+      lettersSlideUpElements.forEach((element) => {
+        const tl = gsap.timeline({ paused: true });
+        const chars = element.querySelectorAll(".char");
+        tl.from(chars, {
+          yPercent: 100,
+          duration: 0.35,
+          ease: "power1.out",
+          stagger: { amount: 0.6 },
+        });
+        createScrollTrigger(element, tl);
+      });
       
     </script>
 
