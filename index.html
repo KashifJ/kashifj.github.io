@@ -798,18 +798,36 @@
         var x = document.getElementsByTagName('script')[0];
         x.parentNode.insertBefore(s, x);
 
-
-      const lettersSlideUpElements = document.querySelectorAll("[letters-slide-up]");
-      lettersSlideUpElements.forEach((element) => {
-        const tl = gsap.timeline({ paused: true });
-        const chars = element.querySelectorAll(".char");
-        tl.from(chars, {
-          yPercent: 100,
-          duration: 0.35,
-          ease: "power1.out",
-          stagger: { amount: 0.6 },
-        });
-        createScrollTrigger(element, tl);
+        document.addEventListener("DOMContentLoaded", (event) => {
+          function createScrollTrigger(triggerElement, timeline) {
+            ScrollTrigger.create({
+              trigger: triggerElement,
+              start: "top bottom",
+              onLeaveBack: () => {
+                timeline.progress(0);
+                timeline.pause();
+              },
+            });
+        
+            ScrollTrigger.create({
+              trigger: triggerElement,
+              start: "top 80%",
+              markers: true,
+              onEnter: () => timeline.play(),
+            });
+          }
+          const lettersSlideUpElements = document.querySelectorAll("[letters-slide-up]");
+          lettersSlideUpElements.forEach((element) => {
+            const tl = gsap.timeline({ paused: true });
+            const chars = element.querySelectorAll(".char");
+            tl.from(chars, {
+              yPercent: 100,
+              duration: 0.35,
+              ease: "power1.out",
+              stagger: { amount: 0.6 },
+            });
+            createScrollTrigger(element, tl);
+          });
       });
       
     </script>
