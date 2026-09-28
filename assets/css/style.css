@@ -2623,7 +2623,13 @@ footer .bottom-right .contact-area {
 .modal {
 }
 
-.modal.show .modal-dialog {
+.modal-dialog {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+}
+
+/* .modal.show .modal-dialog {
     opacity: 1 !important;
     transform: translateY(0) scale(1) !important;
     filter: blur(0) !important;
@@ -2634,13 +2640,19 @@ footer .bottom-right .contact-area {
     transform: translateY(60px) scale(0.95);
     filter: blur(8px);
     transition: all 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+} */
+    
+
+/* .modal.fade.show .modal-dialog {
+	transform: scale(1) !important;
+	opacity: 1 !important;
 }
 
-.modal-dialog {
-    width: 100%;
-    max-width: 100%;
-    margin: 0;
-}
+.modal.fade .modal-dialog {
+	opacity: 0;
+	transform: scale(0.8);
+	transition: opacity 0.45s ease, transform 0.45s cubic-bezier(0.165, 0.84, 0.44, 1);
+} */
 
 .modal-content {
     border: 0;
