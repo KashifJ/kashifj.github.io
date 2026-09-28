@@ -4898,11 +4898,11 @@ $('#project-modal').on('show.bs.modal', function (e) {
 				var controller = new ScrollMagic.Controller({
 					container: ".modal-body"
 				});
-				 
+				
 				$(this).find('.opacity-0').each(function () {
-				 
+				
 					var $section = $(this);
-					 
+					
 					new ScrollMagic.Scene({
 						triggerElement: this,
 						triggerHook: 0.9,
@@ -4913,14 +4913,13 @@ $('#project-modal').on('show.bs.modal', function (e) {
 						$section.addClass('visible');
 					})
 					.on('leave', function (event) {
-					 
+					
 					if (event.scrollDirection === 'REVERSE') {
 						$section.removeClass('visible');
 					}
-				 
-				});
-				 
-				});
+				
+				});				
+				
 			});
 		
 		}, 2000);
