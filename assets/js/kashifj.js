@@ -4895,13 +4895,13 @@ $('#project-modal').on('show.bs.modal', function (e) {
 					
                 });
 
-				$(this).find('.opacity-0').each(function () {
- 
+				$(".modal-body").find('.opacity-0').each(function () {
+
 					var $section = $(this);
-					var $sectionClass = $section.attr("data-url");
+					var $sectionClass = $section.attr("data-url");					
 
 					console.log($sectionClass);
-					 
+					
 					new ScrollMagic.Scene({
 						triggerElement: this,
 						triggerHook: 0.8,
@@ -4929,11 +4929,6 @@ $('#project-modal').on('show.bs.modal', function (e) {
 		setTimeout(function() {
 			modal.find('.modal-body').html("");
 		}, 500);
-
-
-		
-
-		
     }); 
 
 
