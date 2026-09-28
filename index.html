@@ -816,6 +816,15 @@
               onEnter: () => timeline.play(),
             });
           }
+          
+          const splitTypeElements = document.querySelectorAll("[text-split]");
+          splitTypeElements.forEach((splitTypeElement) => {
+            const typeSplit = new SplitType(splitTypeElement, {
+              types: "words, chars",
+              tagName: "span",
+            });
+          });
+          
           const lettersSlideUpElements = document.querySelectorAll("[letters-slide-up]");
           lettersSlideUpElements.forEach((element) => {
             const tl = gsap.timeline({ paused: true });
