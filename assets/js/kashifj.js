@@ -4906,6 +4906,30 @@ $('#project-modal').on('show.bs.modal', function (e) {
 		setTimeout(function() {
 			modal.find('.modal-body').html("");
 		}, 500);
+
+
+		$(this).find('.opacity-0').each(function () {
+ 
+			var $section = $(this);
+			var $sectionClass = $section.attr("data-url");
+			 
+			new ScrollMagic.Scene({
+				triggerElement: this,
+				triggerHook: 0.8,
+				reverse: true
+			})
+			.addTo(controller)
+			.on('enter', function () {
+				$section.addClass($sectionClass);
+			})
+			.on('leave', function (event) {
+				if (event.scrollDirection === 'REVERSE') {
+				$section.removeClass($sectionClass);
+			}
+			});
+		});
+
+		
     }); 
 
 
