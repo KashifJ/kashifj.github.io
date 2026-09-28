@@ -2623,6 +2623,17 @@ footer .bottom-right .contact-area {
 .modal {
 }
 
+.modal.fade .modal-dialog {
+transform: scale(.8);
+opacity: 0;
+transition: all .45s cubic-bezier(.165,.84,.44,1);
+}
+ 
+.modal.show .modal-dialog {
+transform: scale(1);
+opacity: 1;
+}
+
 .modal-dialog {
     width: 100%;
     max-width: 100%;
