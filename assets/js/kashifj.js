@@ -4898,28 +4898,29 @@ $('#project-modal').on('show.bs.modal', function (e) {
 				var controller = new ScrollMagic.Controller({
 					container: ".modal-body"
 				});
-
-				$(".modal-body").find('.opacity-0').each(function () {
-
+				 
+				$(this).find('.opacity-0').each(function () {
+				 
 					var $section = $(this);
-					var $sectionClass = $section.attr("data-url");					
-
-					console.log($sectionClass);
-					
+					 
 					new ScrollMagic.Scene({
 						triggerElement: this,
-						triggerHook: 0.8,
+						triggerHook: 0.9,
 						reverse: true
 					})
 					.addTo(controller)
 					.on('enter', function () {
-						$section.addClass($sectionClass);
+						$section.addClass('visible');
 					})
 					.on('leave', function (event) {
-						if (event.scrollDirection === 'REVERSE') {
-						$section.removeClass($sectionClass);
+					 
+					if (event.scrollDirection === 'REVERSE') {
+						$section.removeClass('visible');
 					}
-					});
+				 
+				});
+				 
+				});
 			});
 		
 		}, 2000);
