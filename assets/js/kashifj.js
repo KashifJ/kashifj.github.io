@@ -4895,6 +4895,10 @@ $('#project-modal').on('show.bs.modal', function (e) {
 					
                 });
 
+				var controller = new ScrollMagic.Controller({
+					container: ".modal-body"
+				});
+
 				$(".modal-body").find('.opacity-0').each(function () {
 
 					var $section = $(this);
