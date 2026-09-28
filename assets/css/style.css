@@ -2623,16 +2623,19 @@ footer .bottom-right .contact-area {
 .modal {
 }
 
-.modal.fade.show .modal-dialog {
-	transform: scale(1) !important;
-	opacity: 1 !important;
+.modal.fade .modal-dialog {
+    opacity: 0;
+    transform: scale(1.1);
+    filter: blur(15px);
+    transition: all 0.6s ease;
+}
+    
+.modal.show .modal-dialog {
+    opacity: 1;
+    transform: scale(1);
+    filter: blur(0);
 }
 
-.modal.fade .modal-dialog {
-	opacity: 0;
-	transform: scale(0.8);
-	transition: opacity 0.45s ease, transform 0.45s cubic-bezier(0.165, 0.84, 0.44, 1);
-}
 .modal-dialog {
     width: 100%;
     max-width: 100%;
