@@ -2629,9 +2629,9 @@ opacity: 0;
 transition: all .45s cubic-bezier(.165,.84,.44,1);
 }
  
-.modal.show .modal-dialog {
-transform: scale(1);
-opacity: 1;
+.modal.fade.show .modal-dialog {
+transform: scale(1) !important;
+opacity: 1 !important;
 }
 
 .modal-dialog {
