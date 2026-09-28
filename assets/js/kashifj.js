@@ -727,11 +727,22 @@ var _gsScope="undefined"!=typeof module&&module.exports&&"undefined"!=typeof glo
 
 			$(this).find(".project-desc h3, .project-desc h4, .project-desc p, .project-desc .text-hover").each(function (j) {
 		
-				var $el = $(this);
+				var $heading = $(this);
 		
-				var headingTween = TweenMax.fromTo(
-					$el,
-					0.8,
+				// Split text into words
+				var words = $heading.text().split(" ");
+		
+				$heading.html(
+					words.map(function(word) {
+						return '<span class="word">' + word + '</span>';
+					}).join(" ")
+				);
+		
+				var tl = new TimelineMax();
+		
+				tl.staggerFromTo(
+					$heading.find(".word"),
+					0.6,
 					{
 						opacity: 0,
 						y: 50
@@ -739,22 +750,22 @@ var _gsScope="undefined"!=typeof module&&module.exports&&"undefined"!=typeof glo
 					{
 						opacity: 1,
 						y: 0,
-						delay: j * 0.25, // 150ms between elements
-						ease: Power4.easeOut
-					}
+						ease: Power4.easeInOut
+					},
+					0.08 // delay between words
 				);
 		
 				new ScrollMagic.Scene({
 					triggerElement: "#pinMaster",
 					triggerHook: 0,
-					offset: (i * offset - 100)
+					offset: (i * offset - 50)
 				})
-				.setTween(headingTween)
+				.setTween(tl)
 				.addTo(controller);
 		
 			});
 		
-		});
+		});		
 
 		$("#profile").each(function (i) {
 
