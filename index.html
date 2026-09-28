@@ -801,7 +801,25 @@
         var x = document.getElementsByTagName('script')[0];
         x.parentNode.insertBefore(s, x);
 
-        document.addEventListener("DOMContentLoaded", (event) => {          
+        document.addEventListener("DOMContentLoaded", (event) => {
+
+          function createScrollTrigger(triggerElement, timeline) {
+            ScrollTrigger.create({
+              trigger: triggerElement,
+              start: "top bottom",
+              onLeaveBack: () => {
+                timeline.progress(0);
+                timeline.pause();
+              },
+            });
+        
+            ScrollTrigger.create({
+              trigger: triggerElement,
+              start: "top 80%",
+              markers: false,
+              onEnter: () => timeline.play(),
+            });
+          }
           
           const splitTypeElements = document.querySelectorAll("[text-split]");
           splitTypeElements.forEach((splitTypeElement) => {
@@ -820,7 +838,8 @@
               duration: 0.35,
               ease: "power1.out",
               stagger: { amount: 0.6 },
-            });            
+            });  
+            createScrollTrigger(element, tl);
           });
       });
       
