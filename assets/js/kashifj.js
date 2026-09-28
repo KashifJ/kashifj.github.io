@@ -4851,6 +4851,33 @@ $('#project-modal').on('show.bs.modal', function (e) {
     modal.find('.modal-body').load(button.data("remote"));
     $("html").addClass( "modal-open" );
 
+	var controller = new ScrollMagic.Controller({
+		container: ".modal-body"
+	});
+	
+		$(this).find('.opacity-0').each(function () {
+	
+		var $section = $(this);
+	
+		new ScrollMagic.Scene({
+			triggerElement: this,
+			triggerHook: 0.9,
+			reverse: true
+		})
+		.addTo(controller)
+		.on('enter', function () {
+			$section.addClass('visible');
+		})
+		.on('leave', function (event) {
+	
+		if (event.scrollDirection === 'REVERSE') {
+			$section.removeClass('visible');
+		}
+	
+		});
+	
+	});
+
 	setTimeout(function() {
 		$('.owl-carousel').owlCarousel({
                     loop:true,
@@ -4893,34 +4920,7 @@ $('#project-modal').on('show.bs.modal', function (e) {
 
                     });
 					
-                });
-
-				var controller = new ScrollMagic.Controller({
-					container: ".modal-body"
-				});
-				
-				$(this).find('.opacity-0').each(function () {
-				
-					var $section = $(this);
-					
-					new ScrollMagic.Scene({
-						triggerElement: this,
-						triggerHook: 0.9,
-						reverse: true
-					})
-					.addTo(controller)
-					.on('enter', function () {
-						$section.addClass('visible');
-					})
-					.on('leave', function (event) {
-					
-					if (event.scrollDirection === 'REVERSE') {
-						$section.removeClass('visible');
-					}
-				
-				});				
-				
-			});
+                });			
 		
 		}, 2000);
 
