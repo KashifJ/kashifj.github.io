@@ -683,24 +683,112 @@ var _gsScope="undefined"!=typeof module&&module.exports&&"undefined"!=typeof glo
             triggerHook: "onLeave",
             duration: "525%"
         }).setPin("#pinMaster").setTween(tl).addTo(controller);
-        $("section").each(function (i) {
-            var picOverlay = $(this).find(".overlay");
-            var animateIn = new TimelineMax();
-            animateIn.fromTo(picOverlay, 1, {
-                skewX: 0,
-                scale: 3
-            }, {
-                skewX: 0,
-                xPercent: 103,
-                transformOrigin: "0% 100%",
-                ease: Power4.easeOut
-            }, "-=1");
-            new ScrollMagic.Scene({
-                triggerElement: "#pinMaster",
-                triggerHook: 0,
-                offset: i * offset
-            }).setTween(animateIn).addTo(controller)
-        });
+		
+		$("section").each(function (i) {
+			var $section = $(this);
+			var picOverlay = $section.find(".overlay");			
+			var animateIn = new TimelineMax();			
+			animateIn.fromTo(
+			picOverlay,
+			1,
+			{
+				skewX: 0,
+				scale: 3
+			},
+			{	skewX: 0,
+				xPercent: 103,
+				transformOrigin: "0% 100%",
+				ease: Power4.easeOut
+			
+			}
+			);
+			
+			var scene = new ScrollMagic.Scene({
+				triggerElement: "#pinMaster",
+				triggerHook: 0,
+				offset: (i * offset)
+			})
+			.setTween(animateIn)
+			.addTo(controller);
+			
+			scene
+				.on("enter", function () {
+				$section.addClass("animated");			
+			})
+			.on("leave", function (event) {
+				// Remove class when scrolling back up
+				if (event.scrollDirection === "REVERSE") {
+					$section.removeClass("animated");
+				}
+			});
+		});
+
+		$("section").each(function (i) {
+
+			$(this).find(".project-desc h3, .project-desc h4, .project-desc p, .project-desc .text-hover").each(function (j) {
+		
+				var $el = $(this);
+		
+				var headingTween = TweenMax.fromTo(
+					$el,
+					0.8,
+					{
+						opacity: 0,
+						y: 50
+					},
+					{
+						opacity: 1,
+						y: 0,
+						delay: j * 0.25, // 150ms between elements
+						ease: Power4.easeOut
+					}
+				);
+		
+				new ScrollMagic.Scene({
+					triggerElement: "#pinMaster",
+					triggerHook: 0,
+					offset: (i * offset - 100)
+				})
+				.setTween(headingTween)
+				.addTo(controller);
+		
+			});
+		
+		});
+
+		$("#profile").each(function (i) {
+
+			$(this).find("h3, p, .timeline ul li").each(function (j) {
+		
+				var $el = $(this);
+		
+				var headingTween = TweenMax.fromTo(
+					$el,
+					0.8,
+					{
+						opacity: 0,
+						y: 50
+					},
+					{
+						opacity: 1,
+						y: 0,
+						delay: j * 0.25, // 150ms between elements
+						ease: Power4.easeOut
+					}
+				);
+		
+				new ScrollMagic.Scene({
+					triggerElement: "#profile",
+					triggerHook: 0,
+					offset: (i * offset - 300)
+				})
+				.setTween(headingTween)
+				.addTo(controller);
+		
+			});
+		
+		});
+
     }
     $(window).scroll(function () {
         inViewport();
