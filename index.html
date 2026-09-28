@@ -842,8 +842,8 @@
             createScrollTrigger(element, tl);
           });
 
-          const lettersSlideUpElements = document.querySelectorAll("[letters-slide-up-1]");
-          lettersSlideUpElements.forEach((element) => {
+          const lettersSlideUpElements1 = document.querySelectorAll("[letters-slide-up-1]");
+          lettersSlideUpElements1.forEach((element) => {
             const tl = gsap.timeline({ paused: true });
             const chars = element.querySelectorAll(".char");
             tl.from(chars, {
