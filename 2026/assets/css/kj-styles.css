@@ -82,6 +82,10 @@ h2, h3 {
     width: 80%;
     padding: calc(var(--bs-gutter-x) * .5) calc(var(--bs-gutter-x) * .5);    
 }
+h2 {
+    width: 100%;
+    max-width: 972px;
+}
 h2 > span {
     color: var(--gray-color);
 }
