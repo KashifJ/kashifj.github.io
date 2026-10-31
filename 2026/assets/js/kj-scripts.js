@@ -65,6 +65,15 @@ updateLiveClocks();
 // Keep the clock ticking accurately every single second
 setInterval(updateLiveClocks, 1000);
 
+
+const currentYearSpan = document.querySelector('.year');
+const currentYear = new Date().getFullYear();
+
+if (currentYearSpan) {
+    currentYearSpan.textContent = currentYear;
+}
+
+
 gsap.fromTo('.logo', 2, {
     position: 'absolute',
     top: '40vh',
@@ -234,6 +243,11 @@ gsap.to('.loader', 2.5, {
                                             // Lock the height to this exact pixel value explicitly
                                             gsap.set(card, { height: contentHeight });
 
+                                            const wrapper = card.querySelector('.image-container-wrapper');
+                                            if (wrapper) {
+                                                const wrapperHeight = wrapper.offsetHeight; // Measures the current rendered layout height in pixels
+                                                gsap.set(wrapper, { height: wrapperHeight });  // Hardcodes the height into inline styles (px)
+                                            }
 
                                             // 🖼️ IMAGE CONTAINER WIDTH LOCK:
                                             // Find the specific container inside this individual card
@@ -279,18 +293,48 @@ gsap.to('.loader', 2.5, {
                                                             trigger: card,          
                                                             start: "top 85%",       
                                                             end: "bottom 15%",      
-                                                            toggleActions: "play reverse resume reverse", 
+                                                            toggleActions: "play none none reverse", 
                                                             invalidateOnRefresh: true 
                                                         }
                                                     }
                                                 );
                                             }
-                                        });
+                                        });                                       
 
 
                                     }
                                 }
                             );
+
+                            gsap.fromTo(".letstalk-wrapper", 
+                                { 
+                                    opacity: 0, 
+                                    visibility: "hidden",                                                
+                                }, 
+                                { 
+                                    opacity: 1, 
+                                    visibility: "visible",                                                
+                                    duration: 0.8, 
+                                    ease: "power2.out",
+                                    
+                                    scrollTrigger: {
+                                        trigger: ".letstalk-wrapper",          
+                                        start: "top 100%",       
+                                        end: "bottom 15%",      
+                                        toggleActions: "play none none reverse", 
+                                        invalidateOnRefresh: true 
+                                    }
+                                }
+                            );
+
+                            gsap.to(".letstalk div", {
+                                xPercent: -200,
+                                ease: "none",
+                                duration: 30,
+                                repeat: -1,
+                                force3D: true,
+                            });
+
                             gsap.fromTo(".philosophy > *", 
                                 { 
                                     opacity: 0, 
@@ -458,7 +502,7 @@ projectCards.forEach((card) => {
         
        // gsap.set(gridView, { visibility: 'hidden', opacity: 0 });
 
-        gsap.fromTo("#gridView, header, .data-frame-left, .intro, .data-frame-right", 
+        gsap.fromTo("#gridView, header, .data-frame-left, .intro, .data-frame-right, .case-study-card-content > *", 
             { opacity: 1, visibility: 'visible'}, 
             { opacity: 0, visibility: 'hidden', duration: 0.5, ease: "power3.out", stagger: 0.05 }
         );
@@ -527,7 +571,7 @@ backBtn.addEventListener('click', () => {
                 const state = Flip.getState(imageContainer);
                 
                 // Target the link tag inside your current active card container
-                const cardLink = currentActiveCard.querySelector('a');
+                const cardLink = currentActiveCard.querySelector('a .image-container-wrapper');
                 if (cardLink) {
                     cardLink.insertBefore(imageContainer, cardLink.firstChild);
                 } else {
@@ -571,6 +615,11 @@ backBtn.addEventListener('click', () => {
                         gsap.fromTo("header, .data-frame-left, .intro, .data-frame-right", 
                             { opacity: 0, visibility: 'hidden'}, 
                             { opacity: 1, visibility: 'visible', duration: 1, ease: "power3.out", stagger: 0.2 }
+                        );
+
+                        gsap.fromTo(".case-study-card-content > *", 
+                            { opacity: 0, visibility: 'hidden', y: 30}, 
+                            { opacity: 1, visibility: 'visible', y: 0, duration: 1, ease: "power3.out", stagger: 0.2 }
                         );
 
                         // Cascade reveal the neighboring hidden cards
