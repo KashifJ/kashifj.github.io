@@ -305,12 +305,33 @@ header::after {
     border-radius: 0 !important;
     background: var(--primary-color) !important;
 }
+.case-studies {
+    background: var(--primary-bg);
+}
 .case-study-card {
     opacity: 0;
     cursor: pointer;
     --card-blur: 0px;
     filter: blur(var(--card-blur));
     will-change: filter, opacity; /* Forces clean GPU rendering loops */
+    margin-bottom: 2.5rem;
+}
+.case-study-card-content {
+    padding: 0.75rem 0 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+.case-study-card-content h6 {
+    margin: 0;
+}
+.case-study-card-content span {
+    color: var(--gray-color);
+}
+.case-study-card-content .text-end {
+    font-size: var(--bs-font-size-sm);
 }
 #gridView {
     background: var(--primary-bg);
@@ -336,6 +357,52 @@ header::after {
 .location .time {
     color: var(--gray-color);
     font-size: 1rem;
+}
+.letstalk-wrapper {
+    width: calc(100% + 40px);
+    margin-left: -20px;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+    margin-top: 12rem;   
+    overflow: hidden; 
+    white-space: nowrap;
+    opacity: 0;    
+}
+a.letstalk {
+    display: block;    
+    padding: 1rem 0;
+    transition: all 0.35s ease-in-out;
+    font-size: 75px;
+    font-weight: 500;
+    letter-spacing: -6%;
+    line-height: normal; 
+    white-space: nowrap;      
+}
+a.letstalk:hover {
+    background: var(--primary-color);
+    color: #e3e3e3;
+}
+a.letstalk span {
+    position: relative;
+    padding-left: 30px;
+    margin-left: 12px;
+}
+a.letstalk span::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 10px;
+    height: 10px;
+    background: var(--gray-color);
+    transform: rotate(45deg);
+}
+.copyrights {
+    padding-inline:0;
+    font-size: 12px;
+    margin-top: 12rem;
+    padding-bottom: 10px;
+    color: var(--gray-color);
 }
 
 /* =================== CARD DETAIL =================== */
