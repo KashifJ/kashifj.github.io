@@ -216,7 +216,7 @@ gsap.to('.loader', 2.5, {
                                                 repeat: -1                                                
                                             });
                                         });
-                                        gsap.fromTo(".more-link", 
+                                        gsap.fromTo(".more-link, .draw-me", 
                                             { 
                                                 opacity: 0, 
                                                 y: 30,
@@ -229,8 +229,7 @@ gsap.to('.loader', 2.5, {
                                                 stagger: 0.05 
                                             }
                                         );
-
-
+                                        
                                         // Target all your project cards
                                         const cards = document.querySelectorAll(".case-study-card");
 
@@ -327,12 +326,22 @@ gsap.to('.loader', 2.5, {
                                 }
                             );
 
+                            // 1. Grab the total horizontal width of a single text content block element
+                            const marqueeText = document.querySelector(".letstalk div");
+                            const loopWidth = marqueeText ? marqueeText.offsetWidth : 500; // Fallback to 500 if element not loaded yet
+
                             gsap.to(".letstalk div", {
-                                xPercent: -200,
+                                // 🚀 Speed factor drive: ensures the animation moves indefinitely to the left
+                                x: `-=${loopWidth}`, 
                                 ease: "none",
-                                duration: 30,
+                                duration: 20, 
                                 repeat: -1,
                                 force3D: true,
+                                modifiers: {
+                                    // ✨ FIXED MATHEMATICAL RANGE WRAPPING:
+                                    // gsap.utils.wrap loops the value seamlessly between the negative width threshold and 0
+                                    x: gsap.utils.unitize(x => gsap.utils.wrap(-loopWidth, 0, parseFloat(x)))
+                                }
                             });
 
                             gsap.fromTo(".philosophy > *", 
@@ -434,7 +443,7 @@ projectCards.forEach((card) => {
     card.addEventListener('click', () => {       
         // Track this specific card so the back button can reference it later        
 
-        body.classList.add('overflow-hidden');
+        body.classList.add('overflow-hidden', 'case-study-opened');
 
         savedScrollPosition = window.scrollY || document.documentElement.scrollTop;
         currentActiveCard = card;
@@ -502,7 +511,7 @@ projectCards.forEach((card) => {
         
        // gsap.set(gridView, { visibility: 'hidden', opacity: 0 });
 
-        gsap.fromTo("#gridView, header, .data-frame-left, .intro, .data-frame-right, .case-study-card-content > *", 
+        gsap.fromTo("#gridView, header, .data-frame-left, .intro, .data-frame-right, .case-study-card-content > *, .letstalk-wrapper, .copyrights", 
             { opacity: 1, visibility: 'visible'}, 
             { opacity: 0, visibility: 'hidden', duration: 0.5, ease: "power3.out", stagger: 0.05 }
         );
@@ -527,6 +536,11 @@ projectCards.forEach((card) => {
                     { opacity: 1, visibility: 'visible', duration: 1, ease: "power3.out", stagger: 0.05 }
                 );
 
+                // ✨ HEIGHT TRACKING: Measure the current rendered pixel height of the image container
+                const containerHeight = imageContainer.offsetHeight;
+                // Lock that exact pixel height onto the imgTarget right away
+                gsap.set(imgTarget, { height: containerHeight });
+
                 //projectDetailMocks.style.display = 'block';                
 
                 //initSectionVisibility();
@@ -538,6 +552,7 @@ projectCards.forEach((card) => {
                         //otherCard.style.display = 'none';
                     }
                 });
+
             }
         });
     });
@@ -612,7 +627,7 @@ backBtn.addEventListener('click', () => {
                     onComplete: () => {           
                         //gsap.set(gridView, { visibility: 'visible', opacity: 1 });
 
-                        gsap.fromTo("header, .data-frame-left, .intro, .data-frame-right", 
+                        gsap.fromTo("header, .data-frame-left, .intro, .data-frame-right, .letstalk-wrapper, .copyrights", 
                             { opacity: 0, visibility: 'hidden'}, 
                             { opacity: 1, visibility: 'visible', duration: 1, ease: "power3.out", stagger: 0.2 }
                         );
@@ -637,9 +652,9 @@ backBtn.addEventListener('click', () => {
                         );
 
                         currentActiveCard.classList.remove('active');
-                        currentActiveCard = null;
+                        currentActiveCard = null;                        
 
-                        body.classList.remove('overflow-hidden');
+                        body.classList.remove('overflow-hidden', 'case-study-opened');
 
                     }
                 });
@@ -674,9 +689,9 @@ function initSectionVisibility() {
 }
 
 
-const triggerBtn = document.querySelector('.more-link');
+const aboutBtn = document.querySelector('.more-link');
 
-triggerBtn.addEventListener('click', () => {
+aboutBtn.addEventListener('click', () => {
     gsap.to('.about', {
         // Adds the class to the element (use "+=" prefix to append it without erasing existing classes)
         className: "about open", 
@@ -734,3 +749,117 @@ aboutCloseBtn.addEventListener('click', () => {
     );
     body.classList.remove('overflow-hidden');
 });
+
+/*
+document.addEventListener('click', (e) => {
+    const nextProjectBtn = e.target.closest('#nextProject');
+    
+    if (nextProjectBtn) {
+        e.preventDefault();
+
+        // 1. Guard Statement: Ensure a project card is actively tracked
+        if (!currentActiveCard) return;
+
+        // 2. Locate the next card in your collection array loop
+        const cardsArray = Array.from(projectCards);
+        const currentIndex = cardsArray.indexOf(currentActiveCard);
+        const nextIndex = (currentIndex + 1) % cardsArray.length;
+        const nextCard = cardsArray[nextIndex];
+
+        if (nextCard) {
+            // 3. PHASE 1: Fade out all current content inside the detail layout wrapper
+            gsap.fromTo(".dynamic-content *, .detail-right .image-container, .detail-right .detail-right-mocks", 
+                { opacity: 1, y: 0 }, 
+                { 
+                    opacity: 0, 
+                    y: -20, // Subtle upward glide to indicate forward navigation
+                    duration: 0.4, 
+                    ease: "power3.in",
+                    stagger: 0.02,
+                    onComplete: () => {
+                        
+                        // 4. PHASE 2: Update structural state tracking definitions
+                        currentActiveCard.classList.remove('active');
+
+                        // Move the image container back home to the card it just left behind
+                        const activeImage = imgTarget.querySelector('.image-container');
+                        const activeLink = currentActiveCard.querySelector('a') || currentActiveCard;
+
+                        if (activeImage) {
+                            activeLink.insertBefore(activeImage, activeLink.firstChild);
+                            
+                            // ✨ STYLE CLEANUP: Wipe out any old layout or scale styles injected by GSAP Flip/animations
+                            activeImage.removeAttribute('style');
+                        }
+
+                        // Advance the tracking index reference pointer to the next card element
+                        currentActiveCard = nextCard;
+                        currentActiveCard.classList.add('active');
+
+                        // Move the next project's image container into the active details target view slot
+                        const nextImage = currentActiveCard.querySelector('.image-container');
+                        if (nextImage) imgTarget.appendChild(nextImage);
+
+                        // Fetch the next project slug string attribute identifier (e.g., "project-2")
+                        const nextSlug = currentActiveCard.getAttribute('data-project');
+                        
+                        // 5. PHASE 3: Fetch next content layer using Vanilla fetch()
+                        const detailContainer = document.querySelector(".dynamic-content");
+                        if (nextSlug && detailContainer) {
+                            
+                            // Reset layout spaces
+                            detailContainer.innerHTML = '';
+                            if (projectDetailMocks) projectDetailMocks.innerHTML = '';
+
+                            fetch(`${nextSlug}.html`)
+                                .then(response => {
+                                    if (!response.ok) throw new Error(`Network error: ${response.statusText}`);
+                                    return response.text();
+                                })
+                                .then(htmlContent => {
+                                    // Parse string content to virtual document offscreen
+                                    const parser = new DOMParser();
+                                    const doc = parser.parseFromString(htmlContent, 'text/html');
+
+                                    // Extract and append Right Mocks
+                                    const incomingMocksInner = doc.querySelector('.detail-right-mocks-inner');
+                                    if (projectDetailMocks && incomingMocksInner) {
+                                        projectDetailMocks.appendChild(incomingMocksInner);
+                                    }
+
+                                    // Extract and append Left Description elements
+                                    const textElements = doc.body.children;
+                                    Array.from(textElements).forEach(element => {
+                                        if (!element.classList.contains('detail-right-mocks-inner')) {
+                                            detailContainer.appendChild(element.cloneNode(true));
+                                        }
+                                    });
+
+                                    // Reset scrollable detail panel viewport layer back to top safely
+                                    const scrollableContainer = document.querySelector('.detail-view-container') || window;
+                                    scrollableContainer.scrollTo(0, 0);
+
+                                    // 6. PHASE 4: Elegant fade-in reveal execution loop for the new content nodes
+                                    gsap.fromTo(".view-detail *", 
+                                        { opacity: 0, y: 30 }, 
+                                        { 
+                                            opacity: 1, 
+                                            y: 0, 
+                                            duration: 0.8, 
+                                            ease: "power3.out", 
+                                            stagger: 0.04 
+                                        }
+                                    );
+                                })
+                                .catch(error => {
+                                    console.error('Error loading next project:', error);
+                                    detailContainer.innerHTML = `<p style="color: red;">Error loading project content dynamically.</p>`;
+                                });
+                        }
+                    }
+                }
+            );
+        }
+    }
+});
+*/
