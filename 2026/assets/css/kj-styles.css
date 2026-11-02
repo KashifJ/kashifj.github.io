@@ -84,7 +84,7 @@ h2, h3 {
 }
 h2 {
     width: 100%;
-    max-width: 972px;
+    max-width: 1064px;
 }
 h2 > span {
     color: var(--gray-color);
@@ -294,7 +294,10 @@ header::after {
     background: var(--border-color);
 }
 .case-studies-space {
-    height: calc(var(--bs-gutter-x) * 18);
+    height: calc(var(--bs-gutter-x) * 17);
+}
+.draw-me {
+    opacity: 0;
 }
 .intro {
     position: fixed;
@@ -332,6 +335,17 @@ header::after {
 }
 .case-study-card-content .text-end {
     font-size: var(--bs-font-size-sm);
+}
+.case-study-card .image-container-wrapper {
+    overflow: hidden;    
+}
+.case-study-card .image-container-wrapper img {
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.6s ease;
+    will-change: transform;
+}
+.case-study-card:hover .image-container-wrapper img {
+    transform: scale(1.02);
+    opacity: 0.8;       
 }
 #gridView {
     background: var(--primary-bg);
@@ -528,7 +542,7 @@ a.letstalk span::before {
     font-size: 1.5rem;
     cursor: pointer;    
     text-align: left;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
     position: relative;
     color: var(--primary-color);
     display: inline-block;    
@@ -551,29 +565,42 @@ a.letstalk span::before {
 }
 .detail-title {
     font-family: var(--bs-body-font-family);
-    font-size: 6rem;
+    font-size: 5.5rem;
     font-weight: 500;    
     margin-bottom: 4rem;
     letter-spacing: -5%;
+    padding: 0;
 }
 .info-row {
     display: grid;
     grid-template-columns: 1fr 2fr;
-    border-top: 1px solid rgba(0,0,0,0.1);
-    padding: 1.5rem 0;
+    border-top: 1px solid var(--border-color);
+    padding: 2.5rem 0;
 }
 .info-row .label {
     font-size: 0.8rem;
     text-transform: uppercase;
-    letter-spacing: 1px;
-    opacity: 0.6;
+    letter-spacing: 1px;    
+    color: var(--gray-color);
 }
 .info-row .description {
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     line-height: 1.5;
+    letter-spacing: -2%;
+    margin: 0;
 }
 .info-row .specs p {
-    margin-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    letter-spacing: -2%;
+    border-bottom: 1px solid var(--border-color);
+    padding: 0 0 1.5rem;
+}
+.info-row .specs p strong {
+    width: 30%;
+    display: inline-block;
+    font-weight: 500;
 }
 /* Target element where the image layout moves into */
 .detail-image-target {
@@ -597,7 +624,8 @@ a.letstalk span::before {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    position: relative;    
+    position: relative;
+    -webkit-overflow-scrolling: touch;    
 }
 .project-card-test.active {
     display: block !important;
@@ -606,4 +634,11 @@ a.letstalk span::before {
 .detail-right-mocks {
     opacity: 0;
     visibility: hidden;
+}
+.detail-right-mocks-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    position: relative;
+    -webkit-overflow-scrolling: touch;
 }
