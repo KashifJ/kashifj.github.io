@@ -226,7 +226,7 @@ gsap.to('.loader', 2.5, {
                                                 y: 0,                                                
                                                 duration: 1.5, 
                                                 ease: "power3.out", 
-                                                stagger: 0.05 
+                                                stagger: 0.05,                                                
                                             }
                                         );
                                         
@@ -279,7 +279,7 @@ gsap.to('.loader', 2.5, {
                                                     { 
                                                         opacity: 0, 
                                                         visibility: "hidden",
-                                                        "--card-blur": "100px" // Start blurred out
+                                                        "--card-blur": "20px" // Start blurred out
                                                     }, 
                                                     { 
                                                         opacity: 1, 
@@ -453,6 +453,8 @@ projectCards.forEach((card) => {
         // ✨ GET ATTRIBUTE & FETCH HTML:
         const projectSlug = card.getAttribute('data-project'); // e.g., "project-1"
         const detailContainer = document.querySelector(".dynamic-content");
+        
+        detailView.classList.add(projectSlug);
 
         if (projectSlug && detailContainer) {
             // Fetch the dedicated HTML fragment matching the data attribute
@@ -473,7 +475,7 @@ projectCards.forEach((card) => {
                         if (incomingMocksInner) {
                             detailRightMocks.appendChild(incomingMocksInner);
                         }
-                    }
+                    }                    
         
                     // 2. Separate out only the Left Text Content 
                     // If your external files have a specific text wrapper class (e.g., .detail-left-inner)
@@ -594,7 +596,7 @@ backBtn.addEventListener('click', () => {
                 }
                 
                 // Now it's safe to toggle layout visibilities so elements occupy grid space
-                detailView.classList.add('hide');
+                detailView.className = "view-detail hide";
                 
                 //gridView.style.display = 'block';
                 gsap.set(gridView, { visibility: 'visible', opacity: 1 });
