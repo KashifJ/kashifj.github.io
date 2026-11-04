@@ -19,6 +19,9 @@ body {
     font-family: var(--bs-body-font-family);
     color: var(--primary-color);
 }
+.primary-bg {
+    background: var(--primary-bg);
+}
 a {
     text-decoration: none;
     color: var(--primary-color);    
@@ -45,11 +48,11 @@ a {
     left: 0;
     height: 2px;
     background: var(--primary-color);
-    width: 0;
+    width: 100%;
     transition: all 1s ease-in-out;
 }
 .more-link:hover::after {
-    width: 100%;
+    width: 0;
     transition: all 1s ease-in-out;
 }
 ul, li {
@@ -554,13 +557,13 @@ a.letstalk span::before {
     position: absolute;
     bottom: 0;
     right: 0;
-    width: 0;
+    width: 100%;
     height: 2px;
     background: var(--primary-color);
     transition: all 1s ease-in-out;
 }
 .back-btn:hover::after { 
-    width: 100%;
+    width: 0;
     transition: all 1s ease-in-out;
 }
 .detail-title {
@@ -573,7 +576,7 @@ a.letstalk span::before {
 }
 .info-row {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 4fr;
     border-top: 1px solid var(--border-color);
     padding: 2.5rem 0;
 }
@@ -582,16 +585,17 @@ a.letstalk span::before {
     text-transform: uppercase;
     letter-spacing: 1px;    
     color: var(--gray-color);
+    margin-top: 2px;
 }
 .info-row .description {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     line-height: 1.5;
     letter-spacing: -2%;
     margin: 0;
 }
 .info-row .specs p {
     margin-bottom: 1.5rem;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     line-height: 1.5;
     letter-spacing: -2%;
     border-bottom: 1px solid var(--border-color);
@@ -623,7 +627,7 @@ a.letstalk span::before {
 .detail-right {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1px;
     position: relative;
     -webkit-overflow-scrolling: touch;    
 }
@@ -638,7 +642,13 @@ a.letstalk span::before {
 .detail-right-mocks-inner {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1px;
     position: relative;
     -webkit-overflow-scrolling: touch;
 }
+/* .view-detail.project-1 {
+    background: #F3F7FF;
+}
+.view-detail.project-2 {
+    background: #F1F1F1;
+} */
