@@ -449,6 +449,7 @@ a.letstalk span::before {
 .about-wrapper {    
     padding: var(--vg);
     padding-bottom: 0;
+    overflow: hidden;
 }
 .about h3 {
     padding: 0;
