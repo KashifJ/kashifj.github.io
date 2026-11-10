@@ -455,11 +455,14 @@ a.letstalk span::before {
     padding: 0;
     margin-bottom: 1.5rem;
     font-size: 39px;
+    width: 100%;
+    max-width: 890px;
 }
 .about h4 {
     font-size: 22px;
     letter-spacing: -3%;
-    max-width: 80%;
+    width: 100%;
+    max-width: 890px;
     line-height: 140%;
     color: var(--gray-color);
     font-weight: 500;    
@@ -492,7 +495,8 @@ a.letstalk span::before {
     position: relative;
     padding: 0;
     margin-top: 2rem;
-    width: 80%;
+    width: 100%;
+    max-width: 890px;
 }
 .about .tags li {
     margin: 8px 8px 0 0;
@@ -500,7 +504,8 @@ a.letstalk span::before {
 }
 .about .exp {
     margin-top: 2rem;
-    width: 80%;
+    width: 100%;
+    max-width: 890px;
     opacity: 0;
 }
 .about .exp h5 {
