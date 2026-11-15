@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio GSAP Flip Transition</title>
+    
+    <style>
+        * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #e5e2da; /* Mimics the warm-grey background color in the video */
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: #1a1a1a;
+    overflow-x: hidden;
+}
+
+/* Hide scrollbar for Chrome, Safari, and Opera */
+html, body {
+    -webkit-overflow-scrolling: touch; /* Optional: ensures smooth momentum scrolling on iOS */
+    scrollbar-width: none;             /* Firefox */
+    -ms-overflow-style: none;          /* IE and Edge */
+}
+
+html::-webkit-scrollbar, 
+body::-webkit-scrollbar {
+    display: none;                     /* Chrome, Safari, and Opera */
+}
+
+/* --- GRID VIEW STYLING --- */
+.view-grid {
+    padding: 4rem 2rem;
+    min-height: 100vh;
+}
+
+.grid-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    padding-bottom: 1rem;
+    margin-bottom: 3rem;
+}
+
+.grid-header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 5rem;
+    font-weight: 400;
+}
+
+.grid-header .count {
+    font-family: 'Playfair Display', serif;
+    font-size: 4rem;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.project-card {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+}
+
+.image-container {
+    width: 100%;
+    aspect-ratio: 4/5;
+    overflow: hidden;
+    background-color: #ccc;
+}
+
+.project-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.project-card:hover .project-img {
+    transform: scale(1.03);
+}
+
+.card-meta {
+    display: flex;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+.card-meta .num {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    margin-right: 1rem;
+}
+
+.meta-text .category {
+    font-size: 0.75rem;
+    opacity: 0.6;
+    letter-spacing: 1px;
+    display: block;
+    margin-bottom: 0.25rem;
+}
+
+.meta-text h3 {
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+/* --- DETAIL VIEW STYLING --- */
+.view-detail {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100vh;
+    padding: 4rem 2rem;
+    z-index: 10;
+}
+
+.view-detail.hidden {
+    display: none;
+    pointer-events: none;
+}
+
+.detail-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+}
+
+.detail-left {
+    position: sticky;
+    top: 4rem;
+}
+
+.back-btn {
+    background: none;
+    border: none;
+    font-family: inherit;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-bottom: 2rem;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+}
+
+.back-btn:hover {
+    opacity: 1;
+}
+
+.detail-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 6rem;
+    font-weight: 400;
+    line-height: 0.9;
+    margin-bottom: 4rem;
+}
+
+.info-row {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    border-top: 1px solid rgba(0,0,0,0.1);
+    padding: 1.5rem 0;
+}
+
+.info-row .label {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0.6;
+}
+
+.info-row .description {
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+.info-row .specs p {
+    margin-bottom: 0.5rem;
+}
+
+/* Target element where the image layout moves into */
+.detail-image-target {
+    width: 100%;
+    aspect-ratio: 4/5;
+}
+
+/* Scroll mockup elements below the dynamic hero image */
+.scroll-content {
+    margin-top: 4rem;
+}
+
+.mock-section {
+    width: 100%;
+    height: 400px;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+}
+
+.green-bg { background-color: #2bb673; color: white; }
+.white-bg { background-color: #ffffff; border: 1px solid #ddd; }
+
+
+/* --- DETAIL MULTI-COLUMN LAYOUT CHANGES --- */
+.view-detail {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100vh;
+    padding: 4rem 2rem;
+    z-index: 10;
+    box-sizing: border-box;
+}
+
+.detail-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+    position: relative;
+}
+
+.detail-left {
+    position: sticky;
+    top: 4rem; /* Keeps text pinned perfectly on the left window boundary */
+    height: calc(100vh - 8rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.detail-right {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* Loop Card Elements */
+.loop-item {
+    width: 100%;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    box-sizing: border-box;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.scroll-ui-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.green-bg { background-color: #14ab61; color: white; }
+.white-bg { background-color: #ffffff; border: 1px solid rgba(0,0,0,0.1); }
+
+.project-card-test.active {
+    display: block !important;
+    opacity: 1 !important;
+}
+
+
+.detail-right {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    position: relative;    
+}
+
+/* Make triggers invisible absolute positions */
+.loop-trigger-top {
+    position: absolute;
+    top: 0;
+    height: 1px;
+    width: 100%;
+}
+
+.loop-trigger-bottom {
+    position: absolute;
+    bottom: 0;
+    height: 1px;
+    width: 100%;
+}
+
+.loop-item {
+    will-change: transform, opacity; /* Informs browser composite pipelines to run animations efficiently */
+    opacity: 0;                      /* Kept hidden until ScrollTrigger enters the screen viewport */
+    transform: translateY(30px);     /* Optional: Creates a subtle slide-up effect as items fade in */
+}
+
+    </style>
+
+    <!-- Google Fonts for typography replication -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- SECTION 1: ALL WORK GRID VIEW -->
+    <section class="view-grid" id="gridView">
+        <header class="grid-header">
+            <h1>ALL WORK</h1>
+            <span class="count">(5)</span>
+        </header>
+
+        <div class="portfolio-grid">
+            <!-- Card 1 -->
+            <div class="project-card-test">
+                <div class="image-container" data-project="evo-money">
+                    <img src="https://picsum.photos" class="project-img">
+                </div>
+                <!-- Card Text Metadata Elements -->
+            </div>
+            
+            <!-- Card 2 -->
+            <div class="project-card-test">
+                <div class="image-container" data-project="plant-tag">
+                    <img src="https://picsum.photos" class="project-img">
+                </div>
+                <!-- Card Text Metadata Elements -->
+            </div>
+
+            <!-- Card 3 -->
+            <div class="project-card-test">
+                <div class="image-container" data-project="plant-tag">
+                    <img src="https://picsum.photos" class="project-img">
+                </div>
+                <!-- Card Text Metadata Elements -->
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2: PROJECT DETAIL VIEW -->
+<section class="view-detail hidden" id="detailView">
+    <div class="detail-container">
+        
+        <!-- Left Column: Kept sticky by CSS and pinned securely by layout boundaries -->
+        <div class="detail-left">
+            <button class="back-btn" id="backBtn">← Back</button>
+            <h2 class="detail-title">EVO MONEY</h2>
+            
+            <div class="detail-info-block">
+                <div class="info-row">
+                    <span class="label">Overview</span>
+                    <p class="description">A digital lending experience designed to make the borrowing process simpler, clearer, and more accessible.</p>
+                </div>
+                <div class="info-row">
+                    <span class="label">Details</span>
+                    <div class="specs">
+                        <p><strong>Client:</strong> Trusting Social</p>
+                        <p><strong>Year:</strong> 2026</p>
+                        <p><strong>Scope:</strong> Webflow Developer</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Column: Holds the target image and the loopable scroll content -->
+        <div class="detail-right" id="scrollTrack">           
+        
+            <div class="detail-image-target" id="imgTarget"></div>           
+            
+            <div class="loop-item green-bg">Content A</div>
+            <div class="loop-item white-bg">Content B</div>
+            <div class="loop-item green-bg">Content C</div>       
+           
+        </div>
+
+    </div>
+</section>
+
+    <script src='https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js'></script>
+    <script src='https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/Flip.min.js'></script>
+    <script src='https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js'></script>
+
+    <script>
+
+gsap.registerPlugin(Flip, ScrollTrigger);
+
+// 1. Target all project cards using querySelectorAll
+const projectCards = document.querySelectorAll('.project-card-test');
+
+const imgTarget = document.querySelector('#imgTarget');
+const gridView = document.querySelector('#gridView');
+const detailView = document.querySelector('#detailView');
+const backBtn = document.querySelector('#backBtn');
+
+let loopTrigger;
+let currentActiveCard = null; // Dynamically tracks which card was clicked
+
+// 2. Loop through each card container using .forEach()
+projectCards.forEach((card) => {
+    const imageContainer = card.querySelector('.image-container');
+
+    card.addEventListener('click', () => {       
+        // Track this specific card so the back button can reference it later
+        currentActiveCard = card;
+
+        currentActiveCard.classList.add('active');
+
+        // LOOP THROUGH ALL CARDS AND ADD THE INACTIVE CLASS TO THE OTHERS
+        
+
+        // Capture layout position of this specific image container
+        const state = Flip.getState(imageContainer);
+
+        // Append this specific container into the right column target
+        imgTarget.appendChild(imageContainer);
+        
+        detailView.classList.remove('hidden');
+        gridView.style.display = 'none';        
+
+        // Animate detail page text items
+        gsap.fromTo(".detail-left *", 
+            { opacity: 0, y: 30 }, 
+            { opacity: 1, y: 0, duration: 0.8, delay: 1, ease: "power3.out", stagger: 0.05 }
+        );
+
+        // Execute the Flip growth animation
+        Flip.from(state, {
+            duration: 1.1,
+            ease: "power4.inOut",
+            absolute: true,
+            onComplete: () => {
+                //initInfiniteScroll();
+                //initScrollSkew();
+                initSectionVisibility();
+
+                projectCards.forEach((otherCard) => {
+                    if (otherCard !== currentActiveCard) {
+                        otherCard.classList.add('inactive');
+                        otherCard.style.display = 'none';        
+                    }
+                });
+            }
+        });
+    });
+});
+
+// 3. Updated Back Button Logic to dynamically handle the active card
+/* backBtn.addEventListener('click', () => {
+    
+    gsap.fromTo(".grid-header", 
+        { opacity: 0, y: 30 }, 
+        { opacity: 1, y: 0, duration: 0.8, delay: 0.2, ease: "power3.out", stagger: 0.05 }
+    );
+
+    // currentActiveCard.classList.remove('active');
+
+    // Guard statement to prevent errors if no card was tracked
+    if (!currentActiveCard) return;
+
+    const imageContainer = imgTarget.querySelector('.image-container');
+    const state = Flip.getState(imageContainer);
+    
+    // Dynamically insert the image container back into the EXACT card wrapper that was clicked
+    currentActiveCard.insertBefore(imageContainer, currentActiveCard.firstChild);
+    
+    window.scrollTo(0, 0);
+    
+    //gsap.set(".detail-left *", { opacity: 0 });
+
+    gsap.fromTo(".detail-left *", 
+        { opacity: 1, y: 0, }, 
+        { opacity: 0, y: 30, duration: 0.8, delay: 0.2, ease: "power3.out", stagger: 0.05 }
+    );
+
+    detailView.classList.add('hidden');
+
+    gridView.style.display = 'block';
+    // Reset active tracker when transition finishes
+    // currentActiveCard = null;   
+    
+    const unactiveCards = Array.from(projectCards).filter(card => card !== currentActiveCard);
+    unactiveCards.forEach(card => card.style.display = 'block');
+    unactiveCards.forEach(card => card.style.opacity = '0');
+
+    Flip.from(state, {
+    duration: 0.9,
+    ease: "power4.inOut",
+    absolute: true,
+    onComplete: () => {           
+        gsap.set(gridView, { display: 'block', opacity: 1 });
+
+        //const unactiveCards = Array.from(projectCards).filter(card => card !== currentActiveCard);
+
+        gsap.fromTo(unactiveCards, 
+            { display: 'block', opacity: 0 }, 
+            { 
+                opacity: 1, 
+                stagger: 0.1,
+                duration: 0.5,                 
+                ease: "power2.out",
+                onComplete: () => {
+                    // REMOVE THE INACTIVE CLASS FROM ALL SURROUNDING CARDS
+                    unactiveCards.forEach(card => card.classList.remove('inactive'));
+                }
+            }
+        );
+
+            currentActiveCard.classList.remove('active');
+            currentActiveCard = null;
+        }
+    });
+}); */
+
+
+backBtn.addEventListener('click', () => {
+    // Guard statement to prevent errors if no card was tracked
+    if (!currentActiveCard) return;
+
+    // 1. FIRST STAGE: Run the fade out on the detail text elements
+    gsap.fromTo(".detail-left *", 
+        { opacity: 1, y: 0 }, 
+        { 
+            opacity: 0, 
+            y: 30, 
+            duration: 0.5, // Reduced slightly to keep the interface feeling snappy
+            ease: "power3.in", // Use an 'in' ease so it gains speed as it vanishes
+            stagger: 0.03,
+            
+            // 2. SECOND STAGE: Trigger layout switches and Flip ONLY after text is completely invisible
+            onComplete: () => {
+                
+                const imageContainer = imgTarget.querySelector('.image-container');
+                const state = Flip.getState(imageContainer);
+                
+                // Dynamically insert the image container back into its original grid card wrapper
+                currentActiveCard.insertBefore(imageContainer, currentActiveCard.firstChild);
+                
+                // Reset scroll view position back to top seamlessly
+                window.scrollTo(0, 0);
+                
+                // Now it's safe to toggle layout visibilities
+                detailView.classList.add('hidden');
+                gridView.style.display = 'block';
+                
+                // Prepare unactive cards for their upcoming entry animation
+                const unactiveCards = Array.from(projectCards).filter(card => card !== currentActiveCard);
+                unactiveCards.forEach(card => {
+                    card.style.display = 'block';
+                    card.style.opacity = '0';
+                });
+
+                // Animate the main grid header header elements concurrently as the card shrinks
+                gsap.fromTo(".grid-header", 
+                    { opacity: 0, y: 30 }, 
+                    { opacity: 1, y: 0, duration: 0.8, delay: 0.1, ease: "power3.out" }
+                );
+
+                // 3. THIRD STAGE: Execute the core image shrink animation loop
+                Flip.from(state, {
+                    duration: 0.9,
+                    ease: "power4.inOut",
+                    absolute: true,
+                    onComplete: () => {           
+                        gsap.set(gridView, { display: 'block', opacity: 1 });
+
+                        // Cascade reveal the neighboring hidden cards
+                        gsap.fromTo(unactiveCards, 
+                            { display: 'block', opacity: 0 }, 
+                            { 
+                                opacity: 1, 
+                                stagger: 0.1,
+                                duration: 0.5,                 
+                                ease: "power2.out",
+                                onComplete: () => {
+                                    // Strip inactive tags away uniformly
+                                    unactiveCards.forEach(card => card.classList.remove('inactive'));
+                                }
+                            }
+                        );
+
+                        // Tear down structural state tracking references
+                        currentActiveCard.classList.remove('active');
+                        currentActiveCard = null;
+                    }
+                });
+            }
+        }
+    );
+});
+
+
+let activeScrollTriggers = []; // Holds references to cleanly wipe instances later
+
+function initSectionVisibility() {
+    // 1. Target all scrollable content tracks in the right column
+    const sections = document.querySelectorAll('.loop-item');
+    if (!sections.length) return;
+
+    sections.forEach((section) => {
+        // 2. Create an isolated trigger timeline for each card section node
+        const triggerInstance = ScrollTrigger.create({
+            trigger: section,
+            start: "top bottom-=50",  // Triggers fade-in slightly before hitting the bottom viewport line
+            end: "bottom top+=50",    // Triggers fade-out slightly after crossing the top viewport line
+            
+            // Core visibility toggles based on directional intersections
+            onEnter: () => gsap.to(section, { opacity: 1, y: 0, duration: 0.6, ease: "power2.out" }),
+            onLeave: () => gsap.to(section, { opacity: 0, y: -30, duration: 0.4, ease: "power2.in" }),
+            onEnterBack: () => gsap.to(section, { opacity: 1, y: 0, duration: 0.6, ease: "power2.out" }),
+            onLeaveBack: () => gsap.to(section, { opacity: 0, y: 30, duration: 0.4, ease: "power2.in" })
+        });
+
+        activeScrollTriggers.push(triggerInstance);
+    });
+}
+
+
+
+    </script>
+</body>
+</html>
