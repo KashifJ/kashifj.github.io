@@ -216,7 +216,7 @@ gsap.to('.loader', 2.5, {
                                                 repeat: -1                                                
                                             });
                                         });
-                                        gsap.fromTo(".more-link, .draw-me", 
+                                        gsap.fromTo(".more-link, .draw-me, .scroll-down", 
                                             { 
                                                 opacity: 0, 
                                                 y: 30,
@@ -865,3 +865,27 @@ document.addEventListener('click', (e) => {
     }
 });
 */
+
+gsap.registerPlugin(ScrollTrigger);
+
+// Create a paused animation that hides the element
+const hideAnim = gsap.to(".scroll-down", {
+  autoAlpha: 0, // Animates both opacity and visibility
+  y: 20,        // Optional: slides down slightly as it fades
+  duration: 0.3,
+  ease: "power2.out",
+  paused: true
+});
+
+ScrollTrigger.create({
+  start: 0,
+  end: "max",
+  onUpdate: (self) => {
+    // self.direction is 1 when scrolling down, -1 when scrolling up
+    if (self.direction === 1) {
+      hideAnim.play();
+    } else if (self.direction === -1) {
+      hideAnim.reverse();
+    }
+  }
+});
