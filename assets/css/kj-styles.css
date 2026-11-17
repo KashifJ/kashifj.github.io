@@ -667,7 +667,7 @@ a.letstalk span::before {
  .tooltip.show {
     z-index: 99999;
  }
-.scroll-down {
+ .scroll-down {
     position: fixed;
     bottom: 20px;
     left: 50%;
