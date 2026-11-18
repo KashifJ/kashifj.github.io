@@ -312,6 +312,9 @@ header::after {
 .data-frame-right .contact li a path, .about .contact li a path {
     fill: light-dark(var(--primary-color), var(--primary-color-dark));
 }
+.data-frame-right .contact li a #mask0_3296_18 path, .about .contact li a #mask0_3296_18 path {
+    fill: white;
+}
 .data-frame-right .contact li a:hover, .about .contact li a:hover {
     background: light-dark(var(--border-color), var(--border-color-dark));
 }
