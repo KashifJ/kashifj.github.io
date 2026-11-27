@@ -244,7 +244,9 @@ header::after {
     padding: calc(var(--bs-gutter-x) * .7) calc(var(--bs-gutter-x) * .5);
     width: calc(100% - 8px);
     display: flex;
-    flex-wrap: wrap;    
+    flex-wrap: wrap;
+    max-height: 450px;
+    overflow: hidden;
 }
 .tags li {
     margin: 8px 0 0 8px;
@@ -769,7 +771,7 @@ body { overflow-x: hidden; }
     }
 
     /* Typography */
-    h1 { font-size: clamp(3rem, 17vw, 5.5rem); line-height: 1; }
+    h1 { font-size: clamp(3rem, 18vw, 5.5rem); line-height: 1; }
     h1 span { padding-right: 16px; }
     h2, h3 {
         width: 100%;
@@ -822,10 +824,7 @@ body { overflow-x: hidden; }
         position: relative;
         padding: 1.25rem 0 0;
         width: 100%;
-        
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
-        scrollbar-width: none;
+        max-height: none;
     }
     .data-frame-left .tags::-webkit-scrollbar { display: none; }
     .tags li { white-space: nowrap; flex: 0 0 auto; }
@@ -842,10 +841,10 @@ body { overflow-x: hidden; }
     .case-study-card { margin-bottom: 2rem; }
 
     /* Let's talk marquee */
-    .letstalk-wrapper { margin-top: 5rem; }
+    .letstalk-wrapper { margin-top: 3rem; }
     a.letstalk { font-size: clamp(2.5rem, 9vw, 4.5rem); padding: .75rem 0; }
     a.letstalk span { padding-left: 22px; margin-left: 8px; }
-    .copyrights { margin-top: 3rem; }
+    .copyrights { display:none; }
 
     /* Right frame: philosophy + contact at the bottom of the page */
     .data-frame-right { padding: 3rem 0 0; }
@@ -875,16 +874,17 @@ body { overflow-x: hidden; }
     .about h4 { font-size: 1.1rem; }
     .about .tags { flex-wrap: wrap; overflow: visible; }
     .about .tags li { margin: 8px 8px 0 0; }
+    .about h3 {font-size: 2.2rem}
 
     /* ---------- Project detail overlay ---------- */
     .detail-container { grid-template-columns: 1fr; }
     .detail-left {
         position: relative;
         height: auto;
-        padding: var(--vg);
+        padding: var(--vg) var(--vg) 0;
     }
     .detail-title {
-        font-size: clamp(2.5rem, 11vw, 4.5rem);
+        font-size: clamp(2.5rem, 14vw, 4.5rem);
         margin-bottom: 2rem;
     }
     .info-row { padding: 1.5rem 0; }
