@@ -758,10 +758,7 @@ body { overflow-x: hidden; }
     .detail-title { font-size: 4rem; }
 }
 
-/* ---------- Large desktops: ≥1400px ---------- */
-@media (min-width: 1400px) {
-    .data-frame-center { max-width: 1000px; }
-}
+
 
 /* ---------- Tablet & Mobile: <992px  (stacked layout) ---------- */
 @media (max-width: 991.98px) {
